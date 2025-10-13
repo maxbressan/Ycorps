@@ -11,13 +11,13 @@ export const ContactForm = () => {
     setIsLoading(true);
 
     const formData = new FormData(e.currentTarget);
-    const templateParams = {
-      from_name: formData.get('nome'),
-      from_company: formData.get('empresa'),
-      from_email: formData.get('email'),
-      from_phone: formData.get('telefone'),
-      message: formData.get('mensagem'),
-    };
+        const templateParams = {
+          from_name: formData.get('nome'),
+          company: formData.get('empresa'),
+          from_email: formData.get('email'),
+          phone: formData.get('telefone'),
+          message: formData.get('mensagem'),
+        };
 
     try {
       await emailjs.send(
