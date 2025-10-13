@@ -64,20 +64,6 @@ export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) =
     }
   };
 
-  const handleFAQClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    
-    // Se estamos na página principal, apenas faz scroll
-    if (window.location.pathname === '/') {
-      const faqSection = document.getElementById('faq');
-      if (faqSection) {
-        faqSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      // Se estamos em outra página, redireciona para a principal
-      window.location.href = '/';
-    }
-  };
 
   return (
     <footer className="bg-black py-16 relative">
