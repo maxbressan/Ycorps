@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export const SuccessPage = () => {
+  useEffect(() => {
+    // Garantir que a página sempre role para o topo
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-black">
       <Header />
