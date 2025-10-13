@@ -151,9 +151,17 @@ export const ContactForm = () => {
                 <h3 className="text-2xl text-white mb-4">
                   Por que escolher a Difrisul?
                 </h3>
-                <p className="text-gray-400 text-lg leading-relaxed">
-                  Com 47 anos de atuação, a Difrisul se consolidou como referência em logística e distribuição de alimentos no sul do Brasil. São mais de 1.000 posições pallets, entregas diárias em três estados e parcerias com grandes marcas nacionais e internacionais. Experiência, estrutura e confiança que fazem da Difrisul o elo decisivo entre a indústria e o mercado.
-                </p>
+                    <div className="text-gray-400 text-lg leading-relaxed space-y-4">
+                      <p>
+                        Com quase cinco décadas de atuação, a Difrisul se firmou como referência em logística e distribuição de alimentos no sul do país.
+                      </p>
+                      <p>
+                        Contamos com estrutura moderna, mais de 1.000 posições pallets e operações diárias em Santa Catarina, Rio Grande do Sul e Paraná.
+                      </p>
+                      <p>
+                        Nosso diferencial está na combinação entre tecnologia, agilidade e relações sólidas com grandes marcas nacionais e internacionais.
+                      </p>
+                    </div>
               </div>
               
             </div>

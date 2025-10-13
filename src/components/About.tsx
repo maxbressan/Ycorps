@@ -7,14 +7,17 @@ export const About = () => {
             <h2 className="text-4xl font-bold mb-6 text-gray-900">
               Sobre a Difrisul
             </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Há mais de 47 anos no mercado, a Difrisul é referência em distribuição de carnes e alimentos. 
-              Nossa missão é levar qualidade, agilidade e confiança para o seu negócio.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Com uma equipe especializada e infraestrutura moderna, garantimos produtos frescos 
-              e entregas pontuais para nossos parceiros comerciais.
-            </p>
+            <div className="text-lg text-gray-600 mb-8 leading-relaxed space-y-4">
+              <p>
+                Fundada em 1978, a Difrisul transformou-se de uma distribuidora regional em um operador logístico estratégico.
+              </p>
+              <p>
+                Oferecemos soluções completas em armazenagem, transporte, garantindo produtos frescos, rastreabilidade e entregas no prazo.
+              </p>
+              <p>
+                Nosso compromisso é conectar o campo, a indústria e o varejo com inteligência e precisão logística.
+              </p>
+            </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">47+</div>
