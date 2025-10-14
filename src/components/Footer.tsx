@@ -9,7 +9,7 @@ export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) =
     if (nome.trim() && empresa.trim()) {
       const message = `Olá! Meu nome é ${nome} da empresa ${empresa}. Gostaria de saber mais sobre os serviços da Difrisul.`;
       const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/5549984092768?text=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/5549988128031?text=${encodedMessage}`;
       window.open(whatsappUrl, '_blank');
       setIsModalOpen(false);
       setNome('');
@@ -100,10 +100,7 @@ export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) =
               <p className="text-gray-500 text-sm">
                 <span className="text-lg text-white">Sede Chapecó</span><br />
                 <span className="mt-2 block">
-                  R. Marselha, n. 320<br />
-                  Esquina com R. Nicarágua<br />
-                  Bairro Líder, Chapecó - SC,<br />
-                  CEP 89805-232
+                  Rua Marselha, N. 320 Esquina com R. Nicarágua, Bairro Líder, Chapecó - SC, CEP 89805-232
                 </span>
               </p>
           </div>

@@ -69,15 +69,15 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-black">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <h2 className="text-2xl text-white mb-4 text-left">
+            <h2 className="text-2xl text-gray-900 mb-4 text-left">
               O que nós fazemos?
             </h2>
-            <p className="text-base text-gray-300 leading-relaxed mb-6">
+            <p className="text-base text-gray-600 leading-relaxed mb-6">
               Colaboramos com o abastecimento de mais de 4 mil estabelecimentos todos os meses, 
               garantindo qualidade e eficiência na distribuição de alimentos. Atuamos no oeste e norte de Santa Catarina, noroeste do Rio Grande do Sul e sudoeste do Paraná.
             </p>
@@ -88,15 +88,15 @@ export const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-black rounded-lg p-6 border border-white/10 hover:border-white/20 transition-colors duration-300"
+                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-black hover:border-2 transition-all duration-300"
               >
-                <div className="text-white mb-4">
+                <div className="text-gray-700 mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-base text-white mb-2">
+                <h3 className="text-base text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-xs text-gray-300 leading-relaxed">
+                <p className="text-xs text-gray-600 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -106,7 +106,7 @@ export const Services = () => {
           {/* CTA Button */}
           <div className="flex justify-center">
             <div className="relative">
-              <button className="bg-black border-2 border-white/20 hover:bg-green-600 hover:border-green-600 text-white font-medium px-12 py-6 rounded-full transition-all duration-300 transform hover:translate-x-2 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 relative z-10 animate-border-glow">
+              <button className="bg-gray-900 border-2 border-gray-300 hover:bg-green-600 hover:border-green-600 text-white font-medium px-12 py-6 rounded-full transition-all duration-300 transform hover:translate-x-2 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 relative z-10 animate-border-glow">
                 <span>Quero fazer um pedido</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

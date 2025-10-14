@@ -76,6 +76,19 @@ export const Header = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    // Se estamos na página principal, apenas faz scroll para o hero
+    if (window.location.pathname === '/') {
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Se estamos em outra página, redireciona para a principal
+      window.location.href = '/';
+    }
+  };
+
   return (
     <header className="bg-black/70 fixed top-0 left-0 right-0 z-50 overflow-hidden shadow-[0_4px_20px_rgba(255,255,255,0.1)] backdrop-blur-sm">
       {/* Imagem posicionada acima do cabeçalho */}
@@ -83,7 +96,8 @@ export const Header = () => {
         <img 
           src="/img/01.png" 
           alt="Logo Difrisul" 
-          className="w-72 h-72 object-contain"
+          className="w-72 h-72 object-contain cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={handleLogoClick}
         />
       </div>
       

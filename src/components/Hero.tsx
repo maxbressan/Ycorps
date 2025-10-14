@@ -12,7 +12,7 @@ export const Hero = () => {
           style={{ opacity: 0.35 }}
         >
           <source src="/img/02.mp4" type="video/mp4" />
-          Seu navegador não suporta vídeos.
+          <p>Seu navegador não suporta vídeos.</p>
         </video>
       </div>
       
