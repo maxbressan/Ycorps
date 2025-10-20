@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -59,7 +59,7 @@ export const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-black">
+    <section id="faq" className="py-20 bg-[#0A262E]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl text-left text-white mb-4">
@@ -73,7 +73,7 @@ export const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-black border border-gray-700/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600/50"
+                className="bg-[#0A262E] border border-gray-700/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600/50"
               >
                 <button
                   onClick={() => toggleFAQ(index)}

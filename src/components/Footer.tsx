@@ -66,22 +66,12 @@ export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) =
 
 
   return (
-    <footer className="bg-black py-16 relative">
+    <footer className="bg-[#0A262E] py-16 relative">
       {/* Container principal com borda redonda e sombra branca */}
       <div className="container mx-auto px-4">
-        <div className="bg-black rounded-3xl p-8 border-t border-white/20 relative overflow-hidden">
-          {/* Sombra branca sutil no topo central */}
-          {!hideTopShadow && (
-            <div className="absolute inset-x-0 -top-20 h-[300px] opacity-10 z-0" style={{ backgroundImage: 'radial-gradient(circle at center top, rgba(255,255,255,0.5) 0%, transparent 70%)' }}></div>
-          )}
-          {/* Watermark de fundo */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-[0.03]">
-            <img 
-              src="/img/01.png" 
-              alt="Logo Difrisul" 
-              className="w-[768px] h-[768px] object-contain"
-            />
-          </div>
+        <div className="bg-[#0A262E] rounded-3xl p-8 border-t border-white/20 relative overflow-hidden">
+          {/* Sombra removida */}
+          {/* Watermark removida conforme solicitado */}
           
           <div className="relative z-10 grid md:grid-cols-4 gap-8">
             {/* Seção Logo */}
@@ -100,7 +90,7 @@ export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) =
               <p className="text-gray-500 text-sm">
                 <span className="text-lg text-white">Sede Chapecó</span><br />
                 <span className="mt-2 block">
-                  Rua Marselha, N. 320 Esquina com R. Nicarágua, Bairro Líder, Chapecó - SC, CEP 89805-232
+                  Rua Marselha, Nº 320 Esquina com Rua Nicarágua, Bairro Líder, Chapecó - SC, CEP 89.805-232
                 </span>
               </p>
           </div>
@@ -161,7 +151,7 @@ export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) =
 
       {/* Modal WhatsApp */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[100] p-4">
+        <div className="fixed inset-0 bg-[#0A262E]/50 flex items-center justify-center z-[100] p-4">
           <div className="bg-white rounded-lg max-w-md w-full mx-4">
             {/* Header */}
             <div className="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">

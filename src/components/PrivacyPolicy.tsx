@@ -1,6 +1,6 @@
 export const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen bg-[#0A262E] text-white">
       <div className="container mx-auto px-4 py-20 pt-40">
         <div className="max-w-4xl mx-auto">
           {/* Botão para voltar à página principal */}

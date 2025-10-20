@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section id="hero" className="text-white py-20 pt-40 relative overflow-hidden" style={{ backgroundColor: '#000000' }}>
+    <section id="hero" className="text-white py-20 pt-40 relative overflow-hidden" style={{ backgroundColor: '#0A262E' }}>
       {/* Vídeo de fundo */}
       <div className="absolute inset-0 w-full h-full">
         <video

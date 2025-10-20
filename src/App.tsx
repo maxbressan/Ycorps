@@ -5,6 +5,7 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
+import { Numbers } from "@/components/Numbers";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
@@ -20,6 +21,7 @@ const HomePage = () => {
       <ContactForm />
       <About />
       <Services />
+      <Numbers />
       <Testimonials />
       <FAQ />
       <Footer />

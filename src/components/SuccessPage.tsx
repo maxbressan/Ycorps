@@ -8,7 +8,7 @@ export const SuccessPage = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-[#0A262E]">
       <Header />
       
       <div className="pt-40 pb-20">
@@ -33,7 +33,7 @@ export const SuccessPage = () => {
                 <h2 className="text-2xl text-white mb-4">O que acontece agora?</h2>
                 <div className="space-y-4 text-left">
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white text-sm font-bold">1</span>
                     </div>
                     <p className="text-gray-300">
@@ -42,7 +42,7 @@ export const SuccessPage = () => {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white text-sm font-bold">2</span>
                     </div>
                     <p className="text-gray-300">
@@ -51,7 +51,7 @@ export const SuccessPage = () => {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-white text-sm font-bold">3</span>
                     </div>
                     <p className="text-gray-300">

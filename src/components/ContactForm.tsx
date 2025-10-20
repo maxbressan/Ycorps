@@ -38,7 +38,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-20 bg-[#0A262E]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -51,7 +51,7 @@ export const ContactForm = () => {
                 Solicite uma proposta personalizada para sua empresa.
               </p>
               
-              <div className="bg-black/50 rounded-2xl p-8 border border-gray-800/50">
+              <div className="bg-[#0A262E]/50 rounded-2xl p-8 border border-gray-800/50">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
@@ -63,7 +63,7 @@ export const ContactForm = () => {
                         id="nome"
                         name="nome"
                         required
-                        className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
                         placeholder="Seu nome"
                       />
                     </div>
@@ -75,7 +75,7 @@ export const ContactForm = () => {
                         type="text"
                         id="empresa"
                         name="empresa"
-                        className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
                         placeholder="Nome da empresa"
                       />
                     </div>
@@ -91,7 +91,7 @@ export const ContactForm = () => {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
                         placeholder="voce@empresa.com"
                       />
                     </div>
@@ -103,7 +103,7 @@ export const ContactForm = () => {
                         type="tel"
                         id="telefone"
                         name="telefone"
-                        className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
                         placeholder="(00) 00000-0000"
                       />
                     </div>
@@ -117,7 +117,7 @@ export const ContactForm = () => {
                       id="mensagem"
                       name="mensagem"
                       rows={4}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all resize-none"
+                      className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all resize-none"
                       placeholder="Conte um pouco sobre sua ideia..."
                     ></textarea>
                   </div>

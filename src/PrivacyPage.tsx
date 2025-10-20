@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 const PrivacyPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#0A262E]">
       <Header />
       <PrivacyPolicy />
       <Footer hideTopShadow={true} />
