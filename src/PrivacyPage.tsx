@@ -7,7 +7,7 @@ const PrivacyPage = () => {
     <div className="min-h-screen bg-[#0A262E]">
       <Header />
       <PrivacyPolicy />
-      <Footer hideTopShadow={true} />
+      <Footer />
     </div>
   );
 };

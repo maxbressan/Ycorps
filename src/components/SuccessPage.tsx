@@ -81,7 +81,7 @@ export const SuccessPage = () => {
         </div>
       </div>
       
-      <Footer hideTopShadow={true} />
+      <Footer />
     </div>
   );
 };

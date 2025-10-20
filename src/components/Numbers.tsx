@@ -1,15 +1,7 @@
-import { useState, useEffect } from 'react';
+import { } from 'react';
 
 export const Numbers = () => {
-  const [isMapLoaded, setIsMapLoaded] = useState(false);
-
-  useEffect(() => {
-    // Simular carregamento do mapa
-    const timer = setTimeout(() => {
-      setIsMapLoaded(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  // Mapa renderizado diretamente; estado de carregamento removido
 
   const stats = [
     {

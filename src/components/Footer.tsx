@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Footer = ({ hideTopShadow = false }: { hideTopShadow?: boolean }) => {
+export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [nome, setNome] = useState('');
   const [empresa, setEmpresa] = useState('');
