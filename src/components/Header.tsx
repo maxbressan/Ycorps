@@ -143,7 +143,7 @@ export const Header = () => {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="hidden md:block bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-6 py-2 rounded-full transition-colors font-medium"
+            className="bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-4 md:px-6 py-2 rounded-full transition-colors font-medium text-sm md:text-base"
           >
             Entrar em Contato
           </button>
