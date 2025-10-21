@@ -44,7 +44,7 @@ export const uploadToGoogleDrive = async (file: File, candidateName: string, can
 
     // Tornar o arquivo público para visualização
     await drive.permissions.create({
-      fileId: response.data.id,
+      fileId: response.data.id!,
       requestBody: {
         role: 'reader',
         type: 'anyone'
@@ -54,8 +54,8 @@ export const uploadToGoogleDrive = async (file: File, candidateName: string, can
     console.log('Arquivo tornado público');
 
     // Gerar link de visualização
-    const fileUrl = `https://drive.google.com/file/d/${response.data.id}/view`;
-    const downloadUrl = `https://drive.google.com/uc?export=download&id=${response.data.id}`;
+    const fileUrl = `https://drive.google.com/file/d/${response.data.id!}/view`;
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${response.data.id!}`;
 
     console.log('=== UPLOAD CONCLUÍDO COM SUCESSO ===');
     console.log('URL de visualização:', fileUrl);
@@ -63,7 +63,7 @@ export const uploadToGoogleDrive = async (file: File, candidateName: string, can
 
     return {
       success: true,
-      fileId: response.data.id,
+      fileId: response.data.id!,
       fileName: fileName,
       viewUrl: fileUrl,
       downloadUrl: downloadUrl,
@@ -95,7 +95,7 @@ export const testGoogleDriveConnection = async () => {
     const drive = google.drive({ version: 'v3', auth });
     
     // Testar listando arquivos da pasta
-    const response = await drive.files.list({
+    await drive.files.list({
       q: `'${GOOGLE_DRIVE_FOLDER_ID}' in parents`,
       pageSize: 1
     });
