@@ -8,6 +8,8 @@ export const Hero = () => {
           muted
           loop
           playsInline
+          preload="auto"
+          webkit-playsinline="true"
           className="w-full h-full object-cover"
           style={{ opacity: 0.35 }}
         >
