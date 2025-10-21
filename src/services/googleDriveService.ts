@@ -1,9 +1,9 @@
 import { google } from 'googleapis';
 
 // Configuração do Google Drive
-const GOOGLE_DRIVE_FOLDER_ID = process.env.REACT_APP_GOOGLE_DRIVE_FOLDER_ID || 'YOUR_FOLDER_ID_HERE';
-const GOOGLE_SERVICE_ACCOUNT_EMAIL = process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL || 'YOUR_SERVICE_ACCOUNT_EMAIL';
-const GOOGLE_PRIVATE_KEY = process.env.REACT_APP_GOOGLE_PRIVATE_KEY || 'YOUR_PRIVATE_KEY';
+const GOOGLE_DRIVE_FOLDER_ID = import.meta.env.VITE_GOOGLE_DRIVE_FOLDER_ID || 'YOUR_FOLDER_ID_HERE';
+const GOOGLE_SERVICE_ACCOUNT_EMAIL = import.meta.env.VITE_GOOGLE_SERVICE_ACCOUNT_EMAIL || 'YOUR_SERVICE_ACCOUNT_EMAIL';
+const GOOGLE_PRIVATE_KEY = import.meta.env.VITE_GOOGLE_PRIVATE_KEY || 'YOUR_PRIVATE_KEY';
 
 export const uploadToGoogleDrive = async (file: File, candidateName: string, candidateEmail: string) => {
   try {
