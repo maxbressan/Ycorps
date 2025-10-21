@@ -129,6 +129,10 @@ export const Header = () => {
               FAQ
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
             </a>
+            <a href="/trabalhe-conosco" className="text-white hover:text-white transition-colors relative group">
+              Trabalhe Conosco
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
+            </a>
           </nav>
           
           {/* Botão CTA no canto direito */}

@@ -11,6 +11,7 @@ import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { SuccessPage } from "@/components/SuccessPage";
 import PrivacyPage from "./PrivacyPage";
+import { WorkWithUsPage } from "./WorkWithUsPage";
 
 const HomePage = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/success" element={<SuccessPage />} />
+        <Route path="/trabalhe-conosco" element={<WorkWithUsPage />} />
       </Routes>
     </Router>
   );
