@@ -5,15 +5,17 @@ export const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto">
           {/* Botão para voltar à página principal */}
           <div className="mb-8">
-                <a
-                  href="/#hero"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
+            <button
+              onClick={() => {
+                window.location.href = '/';
+              }}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Voltar à Página Principal
-            </a>
+            </button>
           </div>
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold mb-6 text-white">

@@ -62,12 +62,14 @@ export const SuccessPage = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/#hero"
+                <button
+                  onClick={() => {
+                    window.location.href = '/';
+                  }}
                   className="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-colors"
                 >
                   Voltar ao Início
-                </a>
+                </button>
                 
                 <a
                   href="tel:+5549991874237"
