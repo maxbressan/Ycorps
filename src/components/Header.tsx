@@ -92,7 +92,7 @@ export const Header = () => {
   return (
     <header className="bg-[#0A262E]/70 fixed top-0 left-0 right-0 z-50 overflow-hidden shadow-[0_4px_20px_rgba(255,255,255,0.1)] backdrop-blur-sm">
       {/* Imagem posicionada acima do cabeçalho */}
-      <div className="absolute left-4 z-[60]" style={{ top: '-105px' }}>
+      <div className="absolute left-2 md:left-4 z-[60]" style={{ top: '-105px' }}>
         <img 
           src="/img/01.png" 
           alt="Logo Difrisul" 
