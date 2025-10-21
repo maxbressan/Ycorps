@@ -92,11 +92,11 @@ export const Header = () => {
   return (
     <header className="bg-[#0A262E]/70 fixed top-0 left-0 right-0 z-50 overflow-hidden shadow-[0_4px_20px_rgba(255,255,255,0.1)] backdrop-blur-sm">
       {/* Imagem posicionada acima do cabeçalho */}
-      <div className="absolute left-2 md:left-4 z-[60]" style={{ top: '-105px' }}>
+      <div className="absolute left-2 md:left-4 z-[60]" style={{ top: '-80px' }}>
         <img 
           src="/img/01.png" 
           alt="Logo Difrisul" 
-          className="w-72 h-72 object-contain cursor-pointer hover:opacity-80 transition-opacity"
+          className="w-64 h-64 md:w-72 md:h-72 object-contain cursor-pointer hover:opacity-80 transition-opacity"
           onClick={handleLogoClick}
         />
       </div>
@@ -105,7 +105,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4 relative z-10">
         <div className="flex items-center justify-between">
           {/* Espaço vazio no lado esquerdo para compensar a imagem */}
-          <div className="w-72"></div>
+          <div className="w-64 md:w-72"></div>
           
           {/* Menu de navegação central */}
           <nav className="hidden md:flex items-center space-x-8">
