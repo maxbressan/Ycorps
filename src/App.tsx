@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Numbers } from "@/components/Numbers";
+import { ProjectProcess } from "@/components/ProjectProcess";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,7 @@ const HomePage = () => {
       <Services />
       <Numbers />
       <Testimonials />
+      <ProjectProcess />
       <FAQ />
       <Footer />
     </div>
