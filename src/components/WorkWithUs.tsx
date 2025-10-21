@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+// import { uploadToGoogleDrive } from '@/services/googleDriveService';
 
 export const WorkWithUs = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,6 @@ export const WorkWithUs = () => {
     email: '',
     observacoes: ''
   });
-  const [curriculo, setCurriculo] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -24,28 +24,7 @@ export const WorkWithUs = () => {
     }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      // Validar tamanho do arquivo (máximo 2MB para evitar erro 413)
-      if (file.size > 2 * 1024 * 1024) {
-        alert('Arquivo muito grande. Tamanho máximo: 2MB');
-        e.target.value = '';
-        return;
-      }
-      setCurriculo(file);
-    }
-  };
 
-  // Função para converter arquivo para base64
-  const fileToBase64 = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result as string);
-      reader.onerror = error => reject(error);
-    });
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,24 +34,6 @@ export const WorkWithUs = () => {
     try {
       console.log('=== INICIANDO ENVIO DO FORMULÁRIO ===');
       console.log('Dados do formulário:', formData);
-      console.log('Arquivo selecionado:', curriculo ? curriculo.name : 'Nenhum');
-
-      let curriculoBase64 = '';
-      let curriculoInfo = 'Nenhum arquivo foi anexado.';
-
-      // Converter arquivo para base64 se existir
-      if (curriculo) {
-        console.log('Convertendo arquivo para base64:', curriculo.name, 'Tamanho:', curriculo.size);
-        
-        try {
-          curriculoBase64 = await fileToBase64(curriculo);
-          console.log('Arquivo convertido com sucesso. Tamanho base64:', curriculoBase64.length);
-          curriculoInfo = `Arquivo anexado: ${curriculo.name} (${(curriculo.size / 1024 / 1024).toFixed(2)}MB)`;
-        } catch (base64Error) {
-          console.error('Erro ao converter arquivo para base64:', base64Error);
-          throw new Error('Falha ao processar o arquivo. Tente um arquivo menor.');
-        }
-      }
 
       // Preparar dados para envio com base64
       const templateParams = {
@@ -82,34 +43,26 @@ export const WorkWithUs = () => {
         to_name: 'Difrisul RH',
         reply_to: formData.email,
         // Informações adicionais
-        subject: `Currículo de ${formData.nome}`,
-        curriculo_anexado: curriculo ? `Sim - ${curriculo.name}` : 'Não',
+        subject: `Interesse em trabalhar na Difrisul - ${formData.nome}`,
         data_envio: new Date().toLocaleString('pt-BR'),
-        // Informações do arquivo
-        curriculo_info: curriculoInfo,
-        file_url: curriculoBase64, // Enviando base64 como URL
-        curriculo_url: curriculoBase64,
-        curriculo_nome: curriculo ? curriculo.name : '',
-        curriculo_tamanho: curriculo ? `${(curriculo.size / 1024 / 1024).toFixed(2)}MB` : '',
         // Instruções para o RH
-        instrucoes_curriculo: curriculo ? 
-          `CURRÍCULO ANEXADO EM BASE64:
+        instrucoes_curriculo: `📧 CANDIDATO INTERESSADO:
           
-Nome do arquivo: ${curriculo.name}
-Tamanho: ${(curriculo.size / 1024 / 1024).toFixed(2)}MB
-Email do candidato: ${formData.email}
+📧 Email: ${formData.email}
+📅 Data: ${new Date().toLocaleString('pt-BR')}
 
-O arquivo foi convertido para base64 e está incluído neste email.
-Para visualizar, copie o conteúdo base64 e salve como arquivo com a extensão original.
+💡 PRÓXIMOS PASSOS:
+1. Entre em contato com o candidato pelo email: ${formData.email}
+2. Solicite o envio do currículo por WhatsApp
+3. WhatsApp: (49) 99918-7423
 
-Contato direto: ${formData.email}` :
-          'Nenhum arquivo foi anexado.'
+🔗 LINK WHATSAPP DIRETO:
+https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difrisul. Por favor, envie seu currículo por aqui.
+
+📞 Contato direto: ${formData.email}`
       };
 
-      console.log('Parâmetros do template preparados:', {
-        ...templateParams,
-        file_url: curriculoBase64 ? 'BASE64_DATA_PRESENT' : 'NO_FILE'
-      });
+      console.log('Parâmetros do template preparados:', templateParams);
 
       console.log('Enviando email via EmailJS...');
 
@@ -132,7 +85,6 @@ Contato direto: ${formData.email}` :
         email: '',
         observacoes: ''
       });
-      setCurriculo(null);
       
       // Resetar status após 5 segundos
       setTimeout(() => {
@@ -172,6 +124,9 @@ Contato direto: ${formData.email}` :
 
           {/* Formulário */}
           <div className="bg-gray-900/50 rounded-2xl p-8 border border-gray-700/50">
+            <h2 className="text-3xl text-white mb-6 text-center">
+              Entre em Contato
+            </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Informações Pessoais */}
               <div className="grid md:grid-cols-2 gap-6">
@@ -208,33 +163,6 @@ Contato direto: ${formData.email}` :
                 </div>
               </div>
 
-              {/* Anexo de Currículo */}
-              <div>
-                <label htmlFor="curriculo" className="block text-white font-semibold mb-2">
-                  Anexar Currículo *
-                </label>
-                <div className="relative">
-                  <input
-                    type="file"
-                    id="curriculo"
-                    accept=".pdf,.doc,.docx"
-                    onChange={handleFileChange}
-                    required
-                    className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-600 file:text-white hover:file:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all"
-                  />
-                  <p className="text-gray-400 text-sm mt-2">
-                    Formatos aceitos: PDF, DOC, DOCX (máximo 2MB)
-                  </p>
-                  <p className="text-green-400 text-sm mt-1">
-                    ✅ Nota: O arquivo será convertido para base64 e enviado junto com o email.
-                  </p>
-                  {curriculo && (
-                    <p className="text-green-400 text-sm mt-1">
-                      ✓ Arquivo selecionado: {curriculo.name}
-                    </p>
-                  )}
-                </div>
-              </div>
 
               {/* Observações */}
               <div>
@@ -259,19 +187,11 @@ Contato direto: ${formData.email}` :
                     <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="font-semibold">Currículo enviado com sucesso!</span>
+                    <span className="font-semibold">Mensagem enviada com sucesso!</span>
                   </div>
                   <p className="text-green-300 text-sm">
                     Entraremos em contato em breve através do seu email.
                   </p>
-                  {curriculo && (
-                    <div className="mt-3 p-3 bg-green-900/30 border border-green-500/30 rounded-lg">
-                      <p className="text-green-300 text-sm">
-                        <strong>Arquivo enviado:</strong> Seu currículo "{curriculo.name}" foi convertido para base64 e enviado junto com o email. 
-                        Nossa equipe de RH poderá visualizar o arquivo diretamente.
-                      </p>
-                    </div>
-                  )}
                 </div>
               )}
 
@@ -281,7 +201,7 @@ Contato direto: ${formData.email}` :
                     <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    <span className="font-semibold">Erro ao enviar currículo</span>
+                    <span className="font-semibold">Erro ao enviar mensagem</span>
                   </div>
                   <p className="text-red-300 text-sm">
                     Tente novamente ou entre em contato conosco diretamente.
@@ -305,7 +225,7 @@ Contato direto: ${formData.email}` :
                       Enviando...
                     </span>
                   ) : (
-                    'Enviar Currículo'
+                        'Enviar Mensagem'
                   )}
                 </button>
               </div>
