@@ -91,8 +91,8 @@ export const Header = () => {
 
   return (
     <header className="bg-[#0A262E]/70 fixed top-0 left-0 right-0 z-50 shadow-[0_4px_20px_rgba(255,255,255,0.1)] backdrop-blur-sm">
-      {/* Imagem posicionada acima do cabeçalho no desktop */}
-      <div className="hidden md:block absolute left-4 z-[60]" style={{ top: '-100px' }}>
+      {/* Imagem posicionada acima do cabeçalho */}
+      <div className="absolute left-0 md:left-4 z-[60]" style={{ top: '-100px' }}>
         <img 
           src="/img/01.png" 
           alt="Logo Difrisul" 
@@ -101,24 +101,14 @@ export const Header = () => {
         />
       </div>
       
-      {/* Imagem dentro do cabeçalho no mobile */}
-      <div className="md:hidden flex justify-center py-4">
-        <img 
-          src="/img/01.png" 
-          alt="Logo Difrisul" 
-          className="w-48 h-48 object-contain cursor-pointer hover:opacity-80 transition-opacity"
-          onClick={handleLogoClick}
-        />
-      </div>
-      
-      {/* Conteúdo do cabeçalho apenas no desktop */}
-      <div className="hidden md:block container mx-auto px-4 py-4 relative z-10">
+      {/* Conteúdo do cabeçalho */}
+      <div className="container mx-auto px-16 md:px-4 py-4 relative z-10">
         <div className="flex items-center justify-between">
           {/* Espaço vazio no lado esquerdo para compensar a imagem */}
           <div className="w-72"></div>
           
           {/* Menu de navegação central */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-4 md:space-x-8">
             <a href="#" onClick={handleInicioClick} className="text-white hover:text-white transition-colors relative group">
               Início
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
@@ -153,7 +143,7 @@ export const Header = () => {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="hidden md:block bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-6 py-2 rounded-full transition-colors font-medium"
+            className="bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-4 md:px-6 py-2 rounded-full transition-colors font-medium text-sm md:text-base"
           >
             Entrar em Contato
           </button>
