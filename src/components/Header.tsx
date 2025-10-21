@@ -102,7 +102,7 @@ export const Header = () => {
       </div>
       
       
-      <div className="container mx-auto px-4 py-4 relative z-10">
+      <div className="container mx-auto px-8 md:px-4 py-4 relative z-10">
         <div className="flex items-center justify-between">
           {/* Espaço vazio no lado esquerdo para compensar a imagem */}
           <div className="w-72"></div>
