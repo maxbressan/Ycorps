@@ -107,8 +107,8 @@ export const Header = () => {
           {/* Espaço vazio no lado esquerdo para compensar a imagem */}
           <div className="w-72"></div>
           
-          {/* Menu de navegação central */}
-          <nav className="flex items-center space-x-4 md:space-x-8">
+          {/* Menu de navegação central - apenas desktop */}
+          <nav className="hidden md:flex items-center space-x-8">
             <a href="#" onClick={handleInicioClick} className="text-white hover:text-white transition-colors relative group">
               Início
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
