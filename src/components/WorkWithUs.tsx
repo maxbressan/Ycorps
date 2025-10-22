@@ -6,6 +6,7 @@ export const WorkWithUs = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
+    celular: '',
     observacoes: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,6 +40,7 @@ export const WorkWithUs = () => {
       const templateParams = {
         from_name: formData.nome,
         from_email: formData.email,
+        celular: formData.celular,
         message: formData.observacoes || 'Candidato interessado em trabalhar na Difrisul',
         to_name: 'Difrisul RH',
         reply_to: formData.email,
@@ -49,6 +51,7 @@ export const WorkWithUs = () => {
         instrucoes_curriculo: `📧 CANDIDATO INTERESSADO:
           
 📧 Email: ${formData.email}
+📱 Celular: ${formData.celular || 'Não informado'}
 📅 Data: ${new Date().toLocaleString('pt-BR')}
 
 💡 PRÓXIMOS PASSOS:
@@ -83,6 +86,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
       setFormData({
         nome: '',
         email: '',
+        celular: '',
         observacoes: ''
       });
       
@@ -112,7 +116,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
         <div className="max-w-4xl mx-auto">
           {/* Cabeçalho da página */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl text-white mb-6">
               Trabalhe Conosco
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-6"></div>
@@ -129,7 +133,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Informações Pessoais */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <label htmlFor="nome" className="block text-white font-semibold mb-2">
                     Nome Completo *
@@ -159,6 +163,21 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
                     required
                     className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all"
                     placeholder="seu@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="celular" className="block text-white font-semibold mb-2">
+                    Celular
+                  </label>
+                  <input
+                    type="tel"
+                    id="celular"
+                    name="celular"
+                    value={formData.celular}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all"
+                    placeholder="(49) 99999-9999"
                   />
                 </div>
               </div>
