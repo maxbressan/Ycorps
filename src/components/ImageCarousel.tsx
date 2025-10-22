@@ -14,7 +14,7 @@ export const ImageCarousel = () => {
           {/* Múltiplas sequências para garantir cobertura total */}
           {[...Array(4)].map((_, sequenceIndex) => 
             images.map((image, index) => (
-              <div key={`seq-${sequenceIndex}-${index}`} className="relative w-24 h-24 flex-shrink-0 mr-8">
+              <div key={`seq-${sequenceIndex}-${index}`} className="relative w-32 h-32 flex-shrink-0 mr-8">
                 <img
                   src={image}
                   alt={`Logo ${index + 1}`}
