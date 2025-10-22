@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 // import { uploadToGoogleDrive } from '@/services/googleDriveService';
 
 export const WorkWithUs = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -82,18 +84,10 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
       
       setSubmitStatus('success');
       
-      // Limpar formulário após sucesso
-      setFormData({
-        nome: '',
-        email: '',
-        celular: '',
-        observacoes: ''
-      });
-      
-      // Resetar status após 5 segundos
+      // Redirecionar para página de sucesso após 2 segundos
       setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
+        navigate('/success');
+      }, 2000);
 
     } catch (error: any) {
       console.error('=== ERRO AO ENVIAR EMAIL ===');
