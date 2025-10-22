@@ -40,7 +40,7 @@ export const WorkWithUs = () => {
       const templateParams = {
         from_name: formData.nome,
         from_email: formData.email,
-        celular: formData.celular,
+        from_phone: formData.celular,
         message: formData.observacoes || 'Candidato interessado em trabalhar na Difrisul',
         to_name: 'Difrisul RH',
         reply_to: formData.email,
