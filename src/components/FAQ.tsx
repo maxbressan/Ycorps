@@ -10,7 +10,7 @@ export const FAQ = () => {
     },
     {
       question: "Onde a Difrisul atua?",
-      answer: "A Difrisul atende empresas em todo o sul do Brasil — especialmente em Santa Catarina, Paraná e Rio Grande do Sul — com capacidade logística e frota própria preparada para diferentes demandas do setor alimentício."
+      answer: "A Difrisul atende empresas em todo o sul do Brasil especialmente em Santa Catarina, com capacidade logística e frota própria preparada para diferentes demandas do setor alimentício."
     },
     {
       question: "Quais serviços logísticos a Difrisul oferece?",

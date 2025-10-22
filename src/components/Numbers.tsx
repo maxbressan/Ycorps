@@ -57,7 +57,7 @@ export const Numbers = () => {
                     <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">
                       {stat.number}
                     </div>
-                    <div className="text-white font-semibold mb-2 text-sm md:text-base">
+                    <div className="text-white mb-2 text-sm md:text-base">
                       {stat.title}
                     </div>
                     <div className="text-gray-400 text-xs md:text-sm">
