@@ -50,7 +50,7 @@ export const FAQ = () => {
     },
     {
       question: "A Difrisul é uma distribuidora ou um operador logístico?",
-      answer: "A Difrisul nasceu como distribuidora de alimentos e evoluiu para se tornar um operador logístico estratégico — unindo tradição, tecnologia e visão de futuro para potencializar os resultados dos nossos clientes."
+      answer: "A Difrisul nasceu como distribuidora de alimentos e evoluiu para se tornar um operador logístico estratégico, unindo tradição, tecnologia e visão de futuro para potencializar os resultados dos nossos clientes."
     }
   ];
 
