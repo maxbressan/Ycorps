@@ -167,7 +167,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
               {/* Observações */}
               <div>
                 <label htmlFor="observacoes" className="block text-white font-semibold mb-2">
-                  Observações Adicionais
+                  Me conte um pouco sobre a sua trajetória profissional?
                 </label>
                 <textarea
                   id="observacoes"
