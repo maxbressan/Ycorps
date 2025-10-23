@@ -1,28 +1,5 @@
 export const NumbersCopy = () => {
 
-  const stats = [
-    {
-      number: "4.000+",
-      title: "Estabelecimentos Atendidos",
-      description: "Mensalmente em todo o Sul do Brasil"
-    },
-    {
-      number: "47+",
-      title: "Anos de Experiência",
-      description: "Tradição e confiança no mercado"
-    },
-    {
-      number: "1.000+",
-      title: "Clientes Satisfeitos",
-      description: "Empresas que confiam na Difrisul"
-    },
-    {
-      number: "3",
-      title: "Estados Atendidos",
-      description: "PR, SC e RS com excelência logística"
-    }
-  ];
-
   return (
     <section className="py-12 md:py-20 bg-[#0A262E] relative overflow-hidden">
       {/* Background gradient */}
