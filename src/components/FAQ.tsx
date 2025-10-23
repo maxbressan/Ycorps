@@ -38,7 +38,7 @@ export const FAQ = () => {
     },
     {
       question: "É possível contratar apenas o serviço de armazenagem da Difrisul?",
-      answer: "Sim. Nossas soluções são modulares — o cliente pode optar apenas pela armazenagem, transporte ou pela gestão completa da cadeia logística."
+      answer: "Sim. Nossas soluções são modulares e o cliente pode optar apenas pela armazenagem, transporte ou pela gestão completa da cadeia logística."
     },
     {
       question: "Como entrar em contato com a Difrisul para solicitar uma proposta?",

@@ -7,11 +7,13 @@ import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Numbers } from "@/components/Numbers";
 import { ProjectProcess } from "@/components/ProjectProcess";
+import { Advantages } from "@/components/Advantages";
 import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { SuccessPage } from "@/components/SuccessPage";
 import PrivacyPage from "./PrivacyPage";
+import { CookieConsent } from "@/components/CookieConsent";
 import { WorkWithUsPage } from "./WorkWithUsPage";
 
 const HomePage = () => {
@@ -25,6 +27,7 @@ const HomePage = () => {
       <Services />
       <Numbers />
       <Testimonials />
+      <Advantages />
       <ProjectProcess />
       <FAQ />
       <Footer />
@@ -35,6 +38,7 @@ const HomePage = () => {
 const App = () => {
   return (
     <Router>
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
