@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Numbers } from "@/components/Numbers";
+import { NumbersCopy } from "@/components/NumbersCopy";
 import { ProjectProcess } from "@/components/ProjectProcess";
 import { Advantages } from "@/components/Advantages";
 import { Testimonials } from "@/components/Testimonials";
@@ -29,6 +30,7 @@ const HomePage = () => {
       <Testimonials />
       <Advantages />
       <ProjectProcess />
+      <NumbersCopy />
       <FAQ />
       <Footer />
     </div>
