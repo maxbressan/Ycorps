@@ -16,6 +16,7 @@ import { SuccessPage } from "@/components/SuccessPage";
 import PrivacyPage from "./PrivacyPage";
 import { CookieConsent } from "@/components/CookieConsent";
 import { WorkWithUsPage } from "./WorkWithUsPage";
+import { Linktree } from "@/components/Linktree";
 
 const HomePage = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/trabalhe-conosco" element={<WorkWithUsPage />} />
+        <Route path="/linktree" element={<Linktree />} />
       </Routes>
     </Router>
   );

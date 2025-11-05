@@ -30,7 +30,7 @@ export const NumbersCopy = () => {
                   • Logística inteligente para alimentos e bebidas
                 </div>
                 <div className="text-gray-400 text-lg md:text-xl">
-                  • Parcerias que fortalecem sua cadeia de abastecimento
+                  • Parcerias que fortalecem sua cadeia de
                 </div>
               </div>
             </div>
