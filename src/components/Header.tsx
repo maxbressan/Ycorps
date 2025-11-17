@@ -91,8 +91,8 @@ export const Header = () => {
 
   return (
     <header className="bg-[#0A262E]/70 fixed top-0 left-0 right-0 z-50 shadow-[0_4px_20px_rgba(255,255,255,0.1)] backdrop-blur-sm">
-      {/* Imagem posicionada acima do cabeçalho */}
-      <div className="absolute left-0 md:left-4 z-[60]" style={{ top: '-100px' }}>
+      {/* Imagem posicionada acima do cabeçalho - desktop */}
+      <div className="hidden md:block absolute left-0 md:left-4 z-[60]" style={{ top: '-100px' }}>
         <img 
           src="/img/01.png" 
           alt="Logo Difrisul" 
@@ -101,11 +101,21 @@ export const Header = () => {
         />
       </div>
       
+      {/* Imagem centralizada no topo - mobile */}
+      <div className="md:hidden flex justify-center pt-2 pb-1">
+        <img 
+          src="/img/01.png" 
+          alt="Logo Difrisul" 
+          className="h-16 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={handleLogoClick}
+        />
+      </div>
+      
       {/* Conteúdo do cabeçalho */}
-      <div className="container mx-auto px-16 md:px-4 py-4 relative z-10">
+      <div className="container mx-auto px-2 md:px-4 py-2 md:py-4 relative z-10">
         <div className="flex items-center justify-between">
-          {/* Espaço vazio no lado esquerdo para compensar a imagem */}
-          <div className="w-72"></div>
+          {/* Espaço vazio no lado esquerdo para compensar a imagem - apenas desktop */}
+          <div className="hidden md:block w-72"></div>
           
           {/* Menu de navegação central - apenas desktop */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -143,7 +153,7 @@ export const Header = () => {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-4 md:px-6 py-2 rounded-full transition-colors font-medium text-sm md:text-base"
+            className="hidden md:block bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-4 md:px-6 py-2 rounded-full transition-colors font-medium text-sm md:text-base"
           >
             Entrar em Contato
           </button>
