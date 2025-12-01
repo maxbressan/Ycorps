@@ -16,7 +16,7 @@ export const Numbers = () => {
     {
       number: "1.000+",
       title: "Clientes Satisfeitos",
-      description: "Empresas que confiam na Difrisul"
+      description: "Empresas que confiam na Ycorps"
     },
     {
       number: "3",
@@ -26,9 +26,9 @@ export const Numbers = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-[#0A262E] relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-[#f0ece3] relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-900/10 via-transparent to-green-800/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a3e22]/10 via-transparent to-[#1a3e22]/5"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -38,11 +38,11 @@ export const Numbers = () => {
             <div className="space-y-6 md:space-y-8 order-2 lg:order-1">
               {/* Título da Seção */}
               <div className="text-center lg:text-left">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl text-white mb-4 md:mb-6">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#1a3e22] mb-4 md:mb-6">
                   Números Que Falam Por Si
                 </h3>
-                <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-                  A Difrisul atua no Sul do Brasil, conectando indústrias, mercados e consumidores, 
+                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                  A Ycorps atua no Sul do Brasil, conectando indústrias, mercados e consumidores, 
                   garantindo qualidade e excelência na distribuição de alimentos em toda a região.
                 </p>
               </div>
@@ -52,15 +52,15 @@ export const Numbers = () => {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-gray-900/50 border border-gray-700/50 rounded-xl p-4 md:p-6 hover:border-green-500/30 transition-all duration-300 hover:transform hover:scale-105"
+                    className="bg-white/80 border border-[#1a3e22]/30 rounded-xl p-4 md:p-6 hover:border-[#1a3e22]/60 transition-all duration-300 hover:transform hover:scale-105"
                   >
-                    <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">
+                    <div className="text-2xl md:text-3xl font-bold text-[#1a3e22] mb-2">
                       {stat.number}
                     </div>
-                    <div className="text-white mb-2 text-sm md:text-base">
+                    <div className="text-[#1a3e22] mb-2 text-sm md:text-base">
                       {stat.title}
                     </div>
-                    <div className="text-gray-400 text-xs md:text-sm">
+                    <div className="text-gray-700 text-xs md:text-sm">
                       {stat.description}
                     </div>
                   </div>
@@ -70,11 +70,11 @@ export const Numbers = () => {
 
             {/* Lado Direito - Vídeo */}
               <div className="relative order-1 lg:order-2">
-                <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gray-900/20 rounded-2xl border border-gray-700/30 overflow-hidden">
+                <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white/50 rounded-2xl border border-[#1a3e22]/20 overflow-hidden">
                   {/* Imagem de fundo */}
                   <img
                     src="/img/25.png"
-                    alt="Mapa logístico Difrisul"
+                    alt="Mapa logístico Ycorps"
                     className="w-full h-full object-cover"
                     style={{ opacity: 0.8, objectPosition: 'left center' }}
                   />

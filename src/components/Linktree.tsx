@@ -7,7 +7,7 @@ export const Linktree = () => {
         </svg>
       ),
       text: "Fale Conosco",
-      url: "https://wa.me/5549988128031",
+      url: "http://wa.me/5549988417900",
       target: "_blank"
     },
     {
@@ -17,8 +17,8 @@ export const Linktree = () => {
         </svg>
       ),
       text: "Acesse Nosso Site",
-      url: "https://difrisul.com.br/",
-      target: "_blank"
+      url: "/",
+      target: "_self"
     },
     {
       icon: (
@@ -37,17 +37,7 @@ export const Linktree = () => {
         </svg>
       ),
       text: "Seja Nosso Cliente",
-      url: "https://wa.me/5549988128031",
-      target: "_blank"
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
-        </svg>
-      ),
-      text: "Trabalhe Conosco | E-mail",
-      url: "https://wa.me/5549988128031",
+      url: "http://wa.me/5549988417900",
       target: "_blank"
     },
     {
@@ -57,7 +47,7 @@ export const Linktree = () => {
         </svg>
       ),
       text: "Nossa Localização",
-      url: "https://www.google.com/maps/place/Difrisul+Distribuidora+de+Alimentos/@-27.0747343,-52.6274358,17z/data=!3m1!4b1!4m6!3m5!1s0x94e4b44c69f5afff:0x2036e1d02c5cae1f!8m2!3d-27.0747343!4d-52.6248609!16s%2Fg%2F11c0wylfx4?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D",
+      url: "https://www.google.com/maps/place/Orion+Parque/@-27.801966,-50.3731394,14z/data=!4m7!3m6!1s0x94e018a5511ae4d1:0xac564cb5d8c50c01!8m2!3d-27.801966!4d-50.3370905!15sChVvcmlvbiBwYXJxdWUgc2FsYSAxMTRaFyIVb3Jpb24gcGFycXVlIHNhbGEgMTE0kgEPdGVjaG5vbG9neV9wYXJrmgEkQ2hkRFNVaE5NRzluUzBWSmVXZzVkVGRaYTJRelJpMUJSUkFCqgFLEAEqDCIIc2FsYSAxMTQoDDIeEAEiGr95E95JFoyv4yUp9hO5tr3tfzTVIRMpXoDgMhkQAiIVb3Jpb24gcGFycXVlIHNhbGEgMTE04AEA-gEECAAQOg!16s%2Fg%2F11h0f12hb?entry=tts&g_ep=EgoyMDI1MDkwMy4wIPu8ASoASAFQAw%3D%3D&skid=d5aa1e53-12e4-4287-a720-b7c9d3640e0a",
       target: "_blank"
     }
   ];
@@ -84,18 +74,18 @@ export const Linktree = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A262E] flex items-center justify-center p-4 relative" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)', backgroundSize: '20px 20px' }}>
+    <div className="min-h-screen bg-[#f0ece3] flex items-center justify-center p-4 relative" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(26,62,34,0.05) 1px, transparent 0)', backgroundSize: '20px 20px' }}>
       {/* Central Card */}
-      <div className="w-full max-w-md bg-[#0A262E] rounded-2xl p-8 shadow-2xl relative z-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)', backgroundSize: '20px 20px' }}>
+      <div className="w-full max-w-md bg-white rounded-2xl p-8 shadow-2xl relative z-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(26,62,34,0.03) 1px, transparent 0)', backgroundSize: '20px 20px' }}>
         {/* Top Icons */}
         <div className="flex justify-between items-start mb-6">
-          <div className="w-8 h-8 rounded-full bg-gray-700/50 flex items-center justify-center">
-            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div className="w-8 h-8 rounded-full bg-[#1a3e22]/20 flex items-center justify-center">
+            <svg className="w-4 h-4 text-[#1a3e22]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
           </div>
-          <div className="w-8 h-8 rounded-full bg-gray-700/50 flex items-center justify-center">
-            <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div className="w-8 h-8 rounded-full bg-[#1a3e22]/20 flex items-center justify-center">
+            <svg className="w-4 h-4 text-[#1a3e22]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
             </svg>
           </div>
@@ -103,15 +93,15 @@ export const Linktree = () => {
 
         {/* Logo Section */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-36 h-36 rounded-full bg-[#0A262E] border-2 border-white flex items-center justify-center mb-4 overflow-hidden">
+          <div className="w-36 h-36 rounded-full bg-white border-2 border-[#1a3e22] flex items-center justify-center mb-4 overflow-hidden">
             <img 
               src="/img/01.png" 
-              alt="Difrisul Logo" 
+              alt="Ycorps Logo" 
               className="w-full h-full object-contain p-1"
             />
           </div>
-          <p className="text-white/80 text-sm text-center">
-            Há mais de 47 anos, a segurança do melhor negócio.
+          <p className="text-gray-700 text-sm text-center">
+            Anticorpos IgY de alta performance - Inovação em pesquisa e diagnóstico
           </p>
         </div>
 
@@ -121,15 +111,15 @@ export const Linktree = () => {
             <button
               key={index}
               onClick={() => handleLinkClick(link.url, link.target)}
-              className="w-full bg-transparent border border-white/30 rounded-lg p-4 flex items-center justify-between hover:bg-white/5 transition-colors group"
+              className="w-full bg-transparent border border-[#1a3e22]/30 rounded-lg p-4 flex items-center justify-between hover:bg-[#1a3e22]/5 transition-colors group"
             >
               <div className="flex items-center space-x-3">
-                <div className="text-white">
+                <div className="text-[#1a3e22]">
                   {link.icon}
                 </div>
-                <span className="text-white text-base">{link.text}</span>
+                <span className="text-[#1a3e22] text-base">{link.text}</span>
               </div>
-              <svg className="w-5 h-5 text-white/60" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-[#1a3e22]/60" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
               </svg>
             </button>

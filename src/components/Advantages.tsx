@@ -2,32 +2,31 @@ export const Advantages = () => {
   const advantages = [
     {
       id: 1,
-      title: "Segurança e Controle de Qualidade",
-      description: "Na Difrisul, a qualidade é prioridade. Nossos processos seguem padrões rigorosos de armazenagem e transporte de alimentos. Somos referência em logística alimentar no Sul do Brasil, assegurando que cada produto chegue ao destino com integridade e dentro dos padrões exigidos pela indústria.",
+      title: "Produção Nacional com Entrega Rápida",
+      description: "A Ycorps reduz a dependência de anticorpos importados, garantindo prazos ágeis, disponibilidade contínua e menor risco de descontinuidade de fornecimento.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       )
     },
     {
       id: 2,
-      title: "Redução de Custos Operacionais",
-      description: "A Difrisul transforma sua operação logística em eficiência real. Com infraestrutura moderna e tecnologia integrada, otimizamos rotas, armazenagem e distribuição para reduzir custos e elevar a produtividade. Nosso modelo de distribuição inteligente de alimentos proporciona economia e previsibilidade para empresas em Santa Catarina, Rio Grande do Sul e Paraná.",
+      title: "IgY com Qualidade Superior e Reprodutível",
+      description: "Tecnologia baseada em anticorpos produzidos a partir de ovos, oferecendo maior pureza, estabilidade e menor variação entre lotes, atendendo padrões científicos rigorosos.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       )
     },
     {
       id: 3,
-      title: "Localização Acessível e Estratégica",
-      description: "Contamos com armazéns estrategicamente posicionados no Sul do Brasil, garantindo agilidade no abastecimento e redução de prazos de entrega. Essa estrutura logística facilita o fluxo de produtos entre indústrias, mercados e pontos de venda, tornando a Difrisul uma parceira decisiva em distribuição e logística alimentar para toda a região.",
+      title: "Desenvolvimento Personalizado para Cada Projeto",
+      description: "A Ycorps cria anticorpos sob demanda para laboratórios, universidades e empresas, entregando soluções ajustadas às necessidades de diagnóstico, pesquisa e inovação.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
         </svg>
       )
     }
@@ -41,12 +40,12 @@ export const Advantages = () => {
   };
 
   return (
-    <section className="py-20 bg-[#0A262E]">
+    <section className="py-20 bg-[#f0ece3]">
       <div className="container mx-auto px-4">
         {/* Main Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl text-white mb-4">
-            Principais vantagens da Difrisul
+          <h2 className="text-3xl md:text-4xl text-[#1a3e22] mb-4">
+            Principais vantagens da Ycorps
           </h2>
         </div>
 
@@ -55,10 +54,10 @@ export const Advantages = () => {
           {advantages.map((advantage) => (
             <div
               key={advantage.id}
-              className="bg-gray-100 rounded-3xl p-8 shadow-lg border-t border-l border-r border-gray-200 border-b-4 border-green-500"
+              className="bg-white rounded-3xl p-8 shadow-lg border-t border-l border-r border-gray-200 border-b-4 border-[#1a3e22]"
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+              <div className="w-16 h-16 bg-[#1a3e22] rounded-full flex items-center justify-center text-white mb-6 mx-auto">
                 {advantage.icon}
               </div>
 
@@ -79,7 +78,7 @@ export const Advantages = () => {
         <div className="text-center mt-16">
           <button
             onClick={scrollToContact}
-            className="bg-gray-900 border-2 border-gray-300 hover:bg-green-600 hover:border-green-600 text-white font-medium px-12 py-6 rounded-full transition-all duration-300 transform hover:translate-x-2 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 mx-auto"
+            className="bg-[#1a3e22] border-2 border-[#1a3e22] hover:bg-[#153319] hover:border-[#153319] text-white font-medium px-12 py-6 rounded-full transition-all duration-300 transform hover:translate-x-2 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 mx-auto"
           >
             <span>Fale com um especialista</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

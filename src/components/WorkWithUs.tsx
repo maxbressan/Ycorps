@@ -43,11 +43,11 @@ export const WorkWithUs = () => {
         from_name: formData.nome,
         from_email: formData.email,
         from_phone: formData.celular,
-        message: formData.observacoes || 'Candidato interessado em trabalhar na Difrisul',
-        to_name: 'Difrisul RH',
+        message: formData.observacoes || 'Candidato interessado em trabalhar na Ycorps',
+        to_name: 'Ycorps RH',
         reply_to: formData.email,
         // Informações adicionais
-        subject: `Interesse em trabalhar na Difrisul - ${formData.nome}`,
+        subject: `Interesse em trabalhar na Ycorps - ${formData.nome}`,
         data_envio: new Date().toLocaleString('pt-BR'),
         // Instruções para o RH
         instrucoes_curriculo: `📧 CANDIDATO INTERESSADO:
@@ -59,10 +59,10 @@ export const WorkWithUs = () => {
 💡 PRÓXIMOS PASSOS:
 1. Entre em contato com o candidato pelo email: ${formData.email}
 2. Solicite o envio do currículo por WhatsApp
-3. WhatsApp: (49) 99918-7423
+3. WhatsApp: (49) 98841-7900
 
 🔗 LINK WHATSAPP DIRETO:
-https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difrisul. Por favor, envie seu currículo por aqui.
+http://wa.me/5549988417900?text=Olá! Recebi seu interesse em trabalhar na Ycorps. Por favor, envie seu currículo por aqui.
 
 📞 Contato direto: ${formData.email}`
       };
@@ -105,31 +105,31 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
   };
 
   return (
-    <div className="min-h-screen bg-[#0A262E] py-20 pt-40">
+    <div className="min-h-screen bg-[#f0ece3] py-20 pt-40">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Cabeçalho da página */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl text-white mb-6">
+            <h1 className="text-4xl md:text-5xl text-[#1a3e22] mb-6">
               Trabalhe Conosco
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Faça parte da nossa equipe e contribua para o crescimento da Difrisul. 
+            <div className="w-24 h-1 bg-gradient-to-r from-[#1a3e22] to-[#153319] mx-auto mb-6"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Faça parte da nossa equipe e contribua para o crescimento da Ycorps. 
               Estamos sempre em busca de talentos que compartilhem nossos valores de excelência e inovação.
             </p>
           </div>
 
           {/* Formulário */}
-          <div className="bg-gray-900/50 rounded-2xl p-8 border border-gray-700/50">
-            <h2 className="text-3xl text-white mb-6 text-center">
+          <div className="bg-white/80 rounded-2xl p-8 border border-[#1a3e22]/30">
+            <h2 className="text-3xl text-[#1a3e22] mb-6 text-center">
               Entre em Contato
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Informações Pessoais */}
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <label htmlFor="nome" className="block text-white font-semibold mb-2">
+                  <label htmlFor="nome" className="block text-[#1a3e22] font-semibold mb-2">
                     Nome Completo *
                   </label>
                   <input
@@ -139,7 +139,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
                     value={formData.nome}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all"
+                    className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                     placeholder="Seu nome completo"
                   />
                 </div>
@@ -155,7 +155,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all"
+                    className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -170,7 +170,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
                     name="celular"
                     value={formData.celular}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all"
+                    className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                     placeholder="(49) 99999-9999"
                   />
                 </div>
@@ -188,21 +188,21 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
                   value={formData.observacoes}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 transition-all resize-none"
+                  className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all resize-none"
                   placeholder="Conte-nos mais sobre você, suas habilidades e motivações..."
                 />
               </div>
 
               {/* Mensagens de Status */}
               {submitStatus === 'success' && (
-                <div className="bg-green-900/50 border border-green-500/50 rounded-lg p-4 text-center">
-                  <div className="flex items-center justify-center text-green-400 mb-2">
+                <div className="bg-[#1a3e22]/20 border border-[#1a3e22]/50 rounded-lg p-4 text-center">
+                  <div className="flex items-center justify-center text-[#1a3e22] mb-2">
                     <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="font-semibold">Mensagem enviada com sucesso!</span>
                   </div>
-                  <p className="text-green-300 text-sm">
+                  <p className="text-gray-700 text-sm">
                     Entraremos em contato em breve através do seu email.
                   </p>
                 </div>
@@ -227,7 +227,7 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-green-600 hover:bg-green-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-4 px-12 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25"
+                  className="bg-[#1a3e22] hover:bg-[#153319] disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-4 px-12 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#1a3e22]/25"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center">
@@ -247,45 +247,45 @@ https://wa.me/5549999187423?text=Olá! Recebi seu interesse em trabalhar na Difr
 
           {/* Informações Adicionais */}
           <div className="mt-12 grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-900/30 rounded-xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-4">Por que trabalhar na Difrisul?</h3>
-              <ul className="space-y-3 text-gray-300">
+            <div className="bg-white/80 rounded-xl p-6 border border-[#1a3e22]/30">
+              <h3 className="text-xl font-bold text-[#1a3e22] mb-4">Por que trabalhar na Ycorps?</h3>
+              <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
+                  <span className="text-[#1a3e22] mr-2">✓</span>
                   <span>47+ anos de tradição e estabilidade</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
+                  <span className="text-[#1a3e22] mr-2">✓</span>
                   <span>Oportunidades de crescimento profissional</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
+                  <span className="text-[#1a3e22] mr-2">✓</span>
                   <span>Ambiente de trabalho colaborativo</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
+                  <span className="text-[#1a3e22] mr-2">✓</span>
                   <span>Benefícios e salários competitivos</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-gray-900/30 rounded-xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-4">Processo Seletivo</h3>
-              <div className="space-y-3 text-gray-300">
+            <div className="bg-white/80 rounded-xl p-6 border border-[#1a3e22]/30">
+              <h3 className="text-xl font-bold text-[#1a3e22] mb-4">Processo Seletivo</h3>
+              <div className="space-y-3 text-gray-700">
                 <div className="flex items-center">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">1</div>
+                  <div className="w-6 h-6 bg-[#1a3e22] rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">1</div>
                   <span>Análise do currículo</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">2</div>
+                  <div className="w-6 h-6 bg-[#1a3e22] rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">2</div>
                   <span>Entrevista inicial</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">3</div>
+                  <div className="w-6 h-6 bg-[#1a3e22] rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">3</div>
                   <span>Avaliação técnica</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">4</div>
+                  <div className="w-6 h-6 bg-[#1a3e22] rounded-full flex items-center justify-center text-white text-sm font-bold mr-3">4</div>
                   <span>Entrevista final</span>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import { WorkWithUs } from "@/components/WorkWithUs";
 
 export const WorkWithUsPage = () => {
   return (
-    <div className="min-h-screen bg-[#0A262E]">
+    <div className="min-h-screen bg-[#f0ece3]">
       <Header />
       <WorkWithUs />
       <Footer />

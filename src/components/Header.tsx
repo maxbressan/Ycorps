@@ -90,13 +90,13 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-[#0A262E]/70 fixed top-0 left-0 right-0 z-50 shadow-[0_4px_20px_rgba(255,255,255,0.1)] backdrop-blur-sm">
+    <header className="bg-[#f0ece3]/70 fixed top-0 left-0 right-0 z-50 shadow-[0_4px_20px_rgba(0,0,0,0.1)] backdrop-blur-sm">
       {/* Imagem posicionada acima do cabeçalho - desktop */}
-      <div className="hidden md:block absolute left-0 md:left-4 z-[60]" style={{ top: '-100px' }}>
+      <div className="hidden md:block absolute left-0 md:left-4 z-[60]" style={{ top: '-15px' }}>
         <img 
           src="/img/01.png" 
-          alt="Logo Difrisul" 
-          className="w-72 h-72 object-contain cursor-pointer hover:opacity-80 transition-opacity"
+          alt="Logo Ycorps" 
+          className="w-28 h-28 object-contain cursor-pointer hover:opacity-80 transition-opacity"
           onClick={handleLogoClick}
         />
       </div>
@@ -105,8 +105,8 @@ export const Header = () => {
       <div className="md:hidden flex justify-center pt-2 pb-1">
         <img 
           src="/img/01.png" 
-          alt="Logo Difrisul" 
-          className="h-16 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
+          alt="Logo Ycorps" 
+          className="h-10 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity"
           onClick={handleLogoClick}
         />
       </div>
@@ -115,33 +115,29 @@ export const Header = () => {
       <div className="container mx-auto px-2 md:px-4 py-2 md:py-4 relative z-10">
         <div className="flex items-center justify-between">
           {/* Espaço vazio no lado esquerdo para compensar a imagem - apenas desktop */}
-          <div className="hidden md:block w-72"></div>
+          <div className="hidden md:block w-28"></div>
           
           {/* Menu de navegação central - apenas desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" onClick={handleInicioClick} className="text-white hover:text-white transition-colors relative group">
+            <a href="#" onClick={handleInicioClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
               Início
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#" onClick={handleContatoClick} className="text-white hover:text-white transition-colors relative group">
+            <a href="#" onClick={handleContatoClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
               Contato
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#" onClick={handleSobreClick} className="text-white hover:text-white transition-colors relative group">
+            <a href="#" onClick={handleSobreClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
               Sobre
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#" onClick={handleServicosClick} className="text-white hover:text-white transition-colors relative group">
+            <a href="#" onClick={handleServicosClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
               Serviços
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
-            <a href="#" onClick={handleFAQClick} className="text-white hover:text-white transition-colors relative group">
+            <a href="#" onClick={handleFAQClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
               FAQ
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a href="/trabalhe-conosco" className="text-white hover:text-white transition-colors relative group">
-              Trabalhe Conosco
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
           </nav>
           
@@ -153,7 +149,7 @@ export const Header = () => {
                 contactSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="hidden md:block bg-[#0A262E] border border-white/20 hover:bg-green-600 hover:border-green-600 text-white px-4 md:px-6 py-2 rounded-full transition-colors font-medium text-sm md:text-base"
+            className="hidden md:block bg-[#f0ece3] border border-[#1a3e22]/20 hover:bg-[#1a3e22] hover:border-[#1a3e22] text-[#1a3e22] hover:text-white px-4 md:px-6 py-2 rounded-full transition-colors font-medium text-sm md:text-base"
           >
             Entrar em Contato
           </button>

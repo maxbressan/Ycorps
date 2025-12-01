@@ -4,67 +4,67 @@ export const Services = () => {
       icon: (
         <img 
           src="/img/05.png" 
-          alt="Restaurantes" 
+          alt="Produção Nacional de Anticorpos IgY" 
           className="w-12 h-12 object-contain"
         />
       ),
-      title: "Restaurantes",
-      description: "Fornecimento constante para operações de pequeno, médio e grande porte."
+      title: "Produção Nacional de Anticorpos IgY",
+      description: "Desenvolvemos anticorpos de alta qualidade a partir de ovos (IgY), uma tecnologia biotecnológica moderna e sustentável que oferece pureza e estabilidade superiores aos métodos tradicionais."
     },
     {
       icon: (
         <img 
           src="/img/06.png" 
-          alt="Lanchonetes" 
+          alt="Tecnologia que Gera Confiança" 
           className="w-12 h-12 object-contain"
         />
       ),
-      title: "Lanchonetes",
-      description: "Agilidade no abastecimento de produtos essenciais."
+      title: "Tecnologia que Gera Confiança",
+      description: "Nosso processo integra ciência e inovação em cada etapa, garantindo rastreamento completo, controle rigoroso de qualidade e resultados reprodutíveis para pesquisas e diagnósticos de precisão."
     },
     {
       icon: (
         <img 
           src="/img/07.png" 
-          alt="Supermercados" 
+          alt="Soluções Personalizadas para Pesquisa e Diagnóstico" 
           className="w-12 h-12 object-contain"
         />
       ),
-      title: "Supermercados",
-      description: "Entregas programadas e rastreáveis para redes e mercados locais."
+      title: "Soluções Personalizadas para Pesquisa e Diagnóstico",
+      description: "Atendemos laboratórios, universidades e centros de inovação que buscam anticorpos específicos e confiáveis, desenvolvidos sob medida para diferentes aplicações científicas."
     },
     {
       icon: (
         <img 
           src="/img/08.png" 
-          alt="Padarias" 
+          alt="Compromisso com a Ciência Nacional" 
           className="w-12 h-12 object-contain"
         />
       ),
-      title: "Padarias",
-      description: "Suporte logístico para ingredientes e produtos alimentícios diversos."
+      title: "Compromisso com a Ciência Nacional",
+      description: "A Ycorps nasceu com o propósito de reduzir a dependência do Brasil em relação a anticorpos importados, fortalecendo a autonomia tecnológica e científica do país."
     },
     {
       icon: (
         <img 
           src="/img/09.png" 
-          alt="Açougues" 
+          alt="Sustentabilidade e Ética em Biotecnologia" 
           className="w-12 h-12 object-contain"
         />
       ),
-      title: "Açougues",
-      description: "Transporte seguro e controlado de alimentos perecíveis."
+      title: "Sustentabilidade e Ética em Biotecnologia",
+      description: "A tecnologia IgY dispensa o uso invasivo de animais, representando uma alternativa ética e sustentável sem comprometer a eficiência e o desempenho dos resultados."
     },
     {
       icon: (
         <img 
           src="/img/15.png" 
-          alt="Outros Negócios" 
+          alt="Inovação que Impulsiona Resultados" 
           className="w-12 h-12 object-contain"
         />
       ),
-      title: "Outros Negócios",
-      description: "Soluções personalizadas conforme a necessidade de cada cliente."
+      title: "Inovação que Impulsiona Resultados",
+      description: "Cada anticorpo produzido reflete o compromisso da Ycorps com a excelência científica, a inovação aplicada e a evolução contínua da biotecnologia brasileira."
     }
   ];
 
@@ -78,8 +78,7 @@ export const Services = () => {
               O que nós fazemos?
             </h2>
             <p className="text-base text-gray-600 leading-relaxed mb-6">
-              Colaboramos com o abastecimento de mais de 4 mil estabelecimentos todos os meses, 
-              garantindo qualidade e eficiência na distribuição de alimentos. Atuamos no oeste e norte de Santa Catarina, noroeste do Rio Grande do Sul e sudoeste do Paraná.
+              A Ycorps desenvolve e purifica anticorpos IgY de alta qualidade, produzidos a partir de ovos. Tecnologia biotecnológica nacional para diagnóstico e pesquisa com eficiência e confiabilidade.
             </p>
           </div>
 
@@ -88,7 +87,7 @@ export const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-black hover:border-2 transition-all duration-300"
+                className="bg-white rounded-lg p-6 border border-gray-200 hover:border-[#1a3e22] hover:border-2 transition-all duration-300"
               >
                 <div className="text-gray-700 mb-4">
                   {service.icon}
@@ -113,9 +112,9 @@ export const Services = () => {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-gray-900 border-2 border-gray-300 hover:bg-green-600 hover:border-green-600 text-white font-medium px-12 py-6 rounded-full transition-all duration-300 transform hover:translate-x-2 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 relative z-10 animate-border-glow"
+                className="bg-[#1a3e22] border-2 border-[#1a3e22] hover:bg-[#153319] hover:border-[#153319] text-white font-medium px-12 py-6 rounded-full transition-all duration-300 transform hover:translate-x-2 hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-3 relative z-10 animate-border-glow"
               >
-                <span>Quero fazer um pedido</span>
+                <span>Entre em contato conosco</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

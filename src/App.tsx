@@ -5,17 +5,12 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
-import { Numbers } from "@/components/Numbers";
-import { NumbersCopy } from "@/components/NumbersCopy";
-import { ProjectProcess } from "@/components/ProjectProcess";
 import { Advantages } from "@/components/Advantages";
-import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { SuccessPage } from "@/components/SuccessPage";
 import PrivacyPage from "./PrivacyPage";
 import { CookieConsent } from "@/components/CookieConsent";
-import { WorkWithUsPage } from "./WorkWithUsPage";
 import { Linktree } from "@/components/Linktree";
 
 const HomePage = () => {
@@ -24,14 +19,10 @@ const HomePage = () => {
       <Header />
       <Hero />
       <ImageCarousel />
-      <ContactForm />
       <About />
+      <ContactForm />
       <Services />
-      <Numbers />
-      <Testimonials />
       <Advantages />
-      <ProjectProcess />
-      <NumbersCopy />
       <FAQ />
       <Footer />
     </div>
@@ -46,7 +37,6 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/success" element={<SuccessPage />} />
-        <Route path="/trabalhe-conosco" element={<WorkWithUsPage />} />
         <Route path="/linktree" element={<Linktree />} />
       </Routes>
     </Router>

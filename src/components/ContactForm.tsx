@@ -38,24 +38,24 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#0A262E]">
+    <section id="contact" className="py-20 bg-[#f0ece3]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Formulário - Lado Esquerdo */}
             <div>
-              <h2 className="text-3xl text-white mb-4">
+              <h2 className="text-3xl text-[#1a3e22] mb-4">
                 Entre em Contato
               </h2>
-              <p className="text-gray-400 text-lg mb-8">
+              <p className="text-gray-700 text-lg mb-8">
                 Solicite uma proposta personalizada para sua empresa.
               </p>
               
-              <div className="bg-[#0A262E]/50 rounded-2xl p-8 border border-gray-800/50">
+              <div className="bg-white/80 rounded-2xl p-8 border border-[#1a3e22]/20">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="nome" className="block text-white text-sm font-medium mb-2">
+                      <label htmlFor="nome" className="block text-[#1a3e22] text-sm font-medium mb-2">
                         Nome
                       </label>
                       <input
@@ -63,19 +63,19 @@ export const ContactForm = () => {
                         id="nome"
                         name="nome"
                         required
-                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                         placeholder="Seu nome"
                       />
                     </div>
                     <div>
-                      <label htmlFor="empresa" className="block text-white text-sm font-medium mb-2">
+                      <label htmlFor="empresa" className="block text-[#1a3e22] text-sm font-medium mb-2">
                         Empresa
                       </label>
                       <input
                         type="text"
                         id="empresa"
                         name="empresa"
-                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                         placeholder="Nome da empresa"
                       />
                     </div>
@@ -83,7 +83,7 @@ export const ContactForm = () => {
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
+                      <label htmlFor="email" className="block text-[#1a3e22] text-sm font-medium mb-2">
                         E-mail
                       </label>
                       <input
@@ -91,33 +91,33 @@ export const ContactForm = () => {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                         placeholder="voce@empresa.com"
                       />
                     </div>
                     <div>
-                      <label htmlFor="telefone" className="block text-white text-sm font-medium mb-2">
+                      <label htmlFor="telefone" className="block text-[#1a3e22] text-sm font-medium mb-2">
                         Telefone
                       </label>
                       <input
                         type="tel"
                         id="telefone"
                         name="telefone"
-                        className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all"
+                        className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all"
                         placeholder="(00) 00000-0000"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="mensagem" className="block text-white text-sm font-medium mb-2">
+                    <label htmlFor="mensagem" className="block text-[#1a3e22] text-sm font-medium mb-2">
                       Mensagem
                     </label>
                     <textarea
                       id="mensagem"
                       name="mensagem"
                       rows={4}
-                      className="w-full px-4 py-3 bg-[#0A262E]/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500/50 transition-all resize-none"
+                      className="w-full px-4 py-3 bg-white border border-[#1a3e22]/30 rounded-lg text-[#1a3e22] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1a3e22]/50 transition-all resize-none"
                       placeholder="Conte um pouco sobre sua ideia..."
                     ></textarea>
                   </div>
@@ -126,7 +126,7 @@ export const ContactForm = () => {
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="bg-green-500 hover:bg-green-600 disabled:bg-green-400 disabled:cursor-not-allowed text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center space-x-2"
+                      className="bg-[#1a3e22] hover:bg-[#153319] disabled:bg-[#1a3e22]/50 disabled:cursor-not-allowed text-white font-medium py-3 px-8 rounded-lg transition-colors flex items-center space-x-2"
                     >
                       {isLoading ? (
                         <>
@@ -148,12 +148,12 @@ export const ContactForm = () => {
             {/* Texto - Lado Direito */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl text-white mb-4">
-                  Por que escolher a Difrisul?
+                <h3 className="text-2xl text-[#1a3e22] mb-4">
+                  Por que escolher a Ycorps?
                 </h3>
-                    <div className="text-gray-400 text-lg leading-relaxed space-y-4">
+                    <div className="text-gray-700 text-lg leading-relaxed space-y-4">
                       <p>
-                        Com quase cinco décadas de atuação, a Difrisul se firmou como referência em logística e distribuição de alimentos no sul do país.
+                        Com quase cinco décadas de atuação, a Ycorps se firmou como referência em logística e distribuição de alimentos no sul do país.
                       </p>
                       <p>
                         Contamos com estrutura moderna, mais de 1.000 posições pallets e operações diárias em Santa Catarina, Rio Grande do Sul e Paraná.

@@ -34,7 +34,7 @@ export const ProjectProcess = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#0A262E] relative overflow-hidden">
+    <section className="py-16 bg-[#f0ece3] relative overflow-hidden">
       {/* Vídeo de fundo */}
       <video
         autoPlay
@@ -49,7 +49,7 @@ export const ProjectProcess = () => {
       </video>
       
       {/* Overlay escuro para melhor contraste */}
-      <div className="absolute inset-0 bg-[#0A262E]/80"></div>
+      <div className="absolute inset-0 bg-[#f0ece3]/80"></div>
       
       {/* Conteúdo */}
       <div className="container mx-auto px-4 relative z-10">
@@ -58,10 +58,10 @@ export const ProjectProcess = () => {
           <div className="space-y-4">
             {/* Título Principal */}
             <div>
-              <h2 className="text-2xl md:text-3xl text-white mb-4">
+              <h2 className="text-2xl md:text-3xl text-[#1a3e22] mb-4">
                 Muito mais do que produtos
               </h2>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 Oferecemos muito mais do que produtos, entregamos soluções completas em distribuição de alimentos com excelência e confiança.
               </p>
             </div>
@@ -73,15 +73,15 @@ export const ProjectProcess = () => {
                   {/* Diferencial */}
                   <div className="flex items-start space-x-4">
                     {/* Bullet Point */}
-                    <div className="w-3 h-3 rounded-full mt-2 bg-green-500"></div>
+                    <div className="w-3 h-3 rounded-full mt-2 bg-[#1a3e22]"></div>
                     
                     {/* Conteúdo do Diferencial */}
                     <div className="flex-1">
-                      <h3 className="text-base text-white mb-1">
+                      <h3 className="text-base text-[#1a3e22] mb-1">
                         {step.title}
                       </h3>
                       
-                      <p className="text-gray-300 text-sm leading-relaxed">
+                      <p className="text-gray-700 text-sm leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -90,7 +90,7 @@ export const ProjectProcess = () => {
                   {/* Separador */}
                   {index < steps.length - 1 && (
                     <div className="mt-6 mb-2">
-                      <div className="h-px bg-gray-700"></div>
+                      <div className="h-px bg-[#1a3e22]/30"></div>
                     </div>
                   )}
                 </div>
@@ -106,9 +106,9 @@ export const ProjectProcess = () => {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="bg-green-600 hover:bg-green-700 text-white py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25 flex items-center mx-auto"
+                className="bg-[#1a3e22] hover:bg-[#153319] text-white py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#1a3e22]/25 flex items-center mx-auto"
               >
-                Quero fazer um pedido
+                Entre em contato conosco
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

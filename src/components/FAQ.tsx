@@ -5,52 +5,44 @@ export const FAQ = () => {
 
   const faqs = [
     {
-      question: "O que é a Difrisul?",
-      answer: "A Difrisul é uma empresa com 47 anos de história no mercado de alimentos e logística, atuando como operador logístico e distribuidor no sul do Brasil. Conectamos indústrias, mercados e consumidores, oferecendo soluções completas em transporte, armazenagem e distribuição de produtos alimentícios."
+      question: "O que exatamente a Ycorps produz?",
+      answer: "A Ycorps desenvolve e purifica anticorpos IgY obtidos a partir de ovos, usados em diagnóstico, pesquisa e soluções biotecnológicas que exigem precisão e estabilidade."
     },
     {
-      question: "Onde a Difrisul atua?",
-      answer: "A Difrisul atende empresas em todo o sul do Brasil especialmente em Santa Catarina, com capacidade logística e frota própria preparada para diferentes demandas do setor alimentício."
+      question: "O que diferencia os anticorpos IgY dos anticorpos tradicionais?",
+      answer: "O IgY oferece maior estabilidade, menor variação entre lotes e redução de interferências cruzadas. Isso resulta em análises mais consistentes em comparação a métodos tradicionais."
     },
     {
-      question: "Quais serviços logísticos a Difrisul oferece?",
-      answer: "Oferecemos soluções integradas em armazenagem, transporte, picking, crossdocking e distribuição. Nosso diferencial está na rastreabilidade, agilidade e inteligência aplicada em cada etapa da cadeia logística."
+      question: "Por que confiar em anticorpos produzidos no Brasil?",
+      answer: "A produção nacional permite controle direto sobre cada etapa, do desenvolvimento à purificação, garantindo rastreabilidade completa, menor risco de ruptura de fornecimento e padrões equivalentes aos laboratórios internacionais."
     },
     {
-      question: "A Difrisul trabalha apenas com produtos alimentícios?",
-      answer: "Nosso foco principal é o setor alimentício, com destaque para produtos secos, resfriados e congelados. No entanto, avaliamos parcerias estratégicas em outros segmentos que exigem excelência logística."
+      question: "A qualidade dos anticorpos é comparável aos importados?",
+      answer: "Sim. O processo segue rigor técnico, controle de pureza e testes de desempenho que asseguram equivalência ou superioridade em estabilidade e reprodutibilidade."
     },
     {
-      question: "O que diferencia a Difrisul de outras distribuidoras e operadores logísticos?",
-      answer: "Além de uma estrutura moderna e mais de 1.000 posições pallets, a Difrisul se diferencia pela confiabilidade construída ao longo de décadas, pelo uso de tecnologia na gestão de estoques e pela agilidade nas entregas em toda a região sul."
+      question: "Quem pode utilizar anticorpos desenvolvidos pela Ycorps?",
+      answer: "Laboratórios de diagnóstico, universidades, centros de pesquisa, indústrias e empresas que precisam de soluções confiáveis para análise ou desenvolvimento tecnológico."
     },
     {
-      question: "A Difrisul possui armazém próprio?",
-      answer: "Sim. Contamos com centro de distribuição próprio, equipado com sistemas de controle e rastreabilidade que garantem a qualidade e a segurança dos produtos armazenados."
+      question: "A Ycorps cria anticorpos sob demanda?",
+      answer: "Sim. Projetos personalizados são desenvolvidos quando a aplicação exige um anticorpo específico, garantindo alinhamento ao objetivo científico de cada cliente."
     },
     {
-      question: "Como funciona o processo de transporte da Difrisul?",
-      answer: "A Difrisul realiza o transporte com frota própria e equipe treinada, assegurando entregas dentro do prazo e conforme as condições ideais para cada tipo de produto alimentício."
+      question: "Como funciona o processo de desenvolvimento de um anticorpo?",
+      answer: "O projeto passa por definição do alvo, imunização, coleta, purificação e validação. Cada etapa é controlada, documentada e auditável para garantir padrões consistentes."
     },
     {
-      question: "Quais marcas e empresas a Difrisul atende?",
-      answer: "Atuamos com grandes marcas nacionais e internacionais do setor alimentício, consolidando parcerias de longo prazo baseadas em confiança, qualidade e eficiência logística."
+      question: "O IgY é seguro?",
+      answer: "O método é considerado seguro por dispensar procedimentos invasivos e permitir produção padronizada, livres de agentes que interferem em análises laboratoriais."
     },
     {
-      question: "É possível contratar apenas o serviço de armazenagem da Difrisul?",
-      answer: "Sim. Nossas soluções são modulares e o cliente pode optar apenas pela armazenagem, transporte ou pela gestão completa da cadeia logística."
+      question: "A Ycorps atende empresas que estão iniciando em biotecnologia?",
+      answer: "Sim. O suporte técnico ajuda gestores e equipes a escolherem soluções adequadas, mesmo sem experiência prévia em anticorpos."
     },
     {
-      question: "Como entrar em contato com a Difrisul para solicitar uma proposta?",
-      answer: "Você pode entrar em contato pelo formulário disponível no site ou através dos canais oficiais da Difrisul. Nossa equipe comercial está pronta para entender suas necessidades e propor a melhor solução logística."
-    },
-    {
-      question: "A Difrisul oferece soluções personalizadas para cada cliente?",
-      answer: "Sim. Analisamos cada operação de forma estratégica para desenhar soluções sob medida, otimizando custos, tempo e performance logística."
-    },
-    {
-      question: "A Difrisul é uma distribuidora ou um operador logístico?",
-      answer: "A Difrisul nasceu como distribuidora de alimentos e evoluiu para se tornar um operador logístico estratégico, unindo tradição, tecnologia e visão de futuro para potencializar os resultados dos nossos clientes."
+      question: "Como solicitar um orçamento?",
+      answer: "Basta preencher o formulário de contato do site informando o tipo de solução requerida, aplicação e prazo desejado."
     }
   ];
 
@@ -59,29 +51,29 @@ export const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-[#0A262E]">
+    <section id="faq" className="py-20 bg-[#f0ece3]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl text-left text-white mb-4">
+          <h2 className="text-3xl text-left text-[#1a3e22] mb-4">
             Perguntas Frequentes
           </h2>
-          <p className="text-gray-400 text-lg mb-12">
-            Encontre respostas rápidas sobre nossos serviços, processos e formas de contato.
+          <p className="text-gray-700 text-lg mb-12">
+            Encontre respostas rápidas sobre anticorpos IgY, nossos produtos e processos.
           </p>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-[#0A262E] border border-gray-700/50 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600/50"
+                className="bg-white/80 border border-[#1a3e22]/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-[#1a3e22]/60"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between text-white"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between text-[#1a3e22]"
                 >
                   <span className="text-base pr-4">{faq.question}</span>
                   <svg
-                    className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${
+                    className={`w-5 h-5 text-gray-600 transition-transform duration-300 flex-shrink-0 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -99,8 +91,8 @@ export const FAQ = () => {
                 
                 {openIndex === index && (
                   <div className="px-6 pb-4">
-                    <div className="border-t border-gray-700/50 pt-4">
-                      <p className="text-gray-400 leading-relaxed">
+                      <div className="border-t border-[#1a3e22]/30 pt-4">
+                      <p className="text-gray-700 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
