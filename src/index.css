@@ -118,3 +118,7 @@ html {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
+
+.hero-video-opacity {
+  opacity: 0.30;
+}

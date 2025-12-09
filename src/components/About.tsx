@@ -15,16 +15,6 @@ export const About = () => {
                 Combinando ciência, tecnologia e propósito, criamos um modelo inovador de produção e purificação de anticorpos a partir de ovos (IgY), oferecendo ao mercado nacional uma alternativa confiável, acessível e tecnicamente superior.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 md:gap-6">
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl text-white mb-1 md:mb-2">00+</div>
-                <div className="text-sm md:text-base text-white/90">Anos de Experiência</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-3xl text-white mb-1 md:mb-2">000+</div>
-                <div className="text-sm md:text-base text-white/90">Clientes Satisfeitos</div>
-              </div>
-            </div>
           </div>
           <div className="text-center order-1 md:order-2">
             <img 

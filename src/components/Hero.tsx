@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <section id="hero" className="text-[#1a3e22] py-20 pt-40 relative overflow-hidden" style={{ backgroundColor: '#f0ece3' }}>
+    <section id="hero" className="text-[#1a3e22] py-20 pt-40 relative overflow-hidden bg-[#f0ece3]">
       {/* Vídeo de fundo */}
       <div className="absolute inset-0 w-full h-full">
         <video
@@ -9,9 +9,7 @@ export const Hero = () => {
           loop
           playsInline
           preload="auto"
-          webkit-playsinline="true"
-          className="w-full h-full object-cover"
-          style={{ opacity: 0.30 }}
+          className="w-full h-full object-cover hero-video-opacity"
         >
           <source src="/img/10.mp4" type="video/mp4" />
           <p>Seu navegador não suporta vídeos.</p>

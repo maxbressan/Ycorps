@@ -4,6 +4,8 @@ import { Hero } from "@/components/Hero";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ContactForm } from "@/components/ContactForm";
 import { About } from "@/components/About";
+import { TeamSection } from "@/components/TeamSection";
+import { Recognition } from "@/components/Recognition";
 import { Services } from "@/components/Services";
 import { Advantages } from "@/components/Advantages";
 import { FAQ } from "@/components/FAQ";
@@ -23,6 +25,8 @@ const HomePage = () => {
       <ContactForm />
       <Services />
       <Advantages />
+      <TeamSection />
+      <Recognition />
       <FAQ />
       <Footer />
     </div>

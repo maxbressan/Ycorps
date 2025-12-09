@@ -147,7 +147,7 @@ export const PrivacyPolicy = () => {
             <div className="bg-white/80 p-6 rounded-lg border border-[#1a3e22]/30">
               <p className="mb-2">
                 <strong className="text-[#1a3e22]">E-mail:</strong> 
-                <span className="text-[#1a3e22] font-mono">dpo@ycorps.com</span>
+                <span className="text-[#1a3e22] font-mono">ycorpslaboratorio@gmail.com</span>
               </p>
             </div>
           </div>

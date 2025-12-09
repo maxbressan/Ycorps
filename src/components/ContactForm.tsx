@@ -1,40 +1,42 @@
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { useNavigate } from 'react-router-dom';
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
     const formData = new FormData(e.currentTarget);
-        const templateParams = {
-          from_name: formData.get('nome'),
-          company: formData.get('empresa'),
-          from_email: formData.get('email'),
-          phone: formData.get('telefone'),
-          message: formData.get('mensagem'),
-        };
+    const nome = formData.get('nome') as string;
+    const empresa = formData.get('empresa') as string;
+    const email = formData.get('email') as string;
+    const telefone = formData.get('telefone') as string;
+    const mensagem = formData.get('mensagem') as string;
 
-    try {
-      await emailjs.send(
-        'service_vb4qbhe',
-        'template_nez9ib9',
-        templateParams,
-        'Y9gCyaLr8EeegjIMB'
-      );
-      
-      // Redirecionar para página de sucesso
-      navigate('/success');
-    } catch (error) {
-      console.error('Erro ao enviar email:', error);
-      alert('Erro ao enviar mensagem. Tente novamente.');
-    } finally {
-      setIsLoading(false);
-    }
+    // Formatar mensagem para WhatsApp com perguntas em negrito
+    const mensagemFormatada = `Olá! Gostaria de entrar em contato com a Ycorps:
+
+*Nome:* ${nome}
+${empresa ? `*Empresa:* ${empresa}\n` : ''}*E-mail:* ${email}
+${telefone ? `*Telefone:* ${telefone}\n` : ''}*Mensagem:* ${mensagem}`;
+
+    // Codificar a mensagem para URL
+    const mensagemEncoded = encodeURIComponent(mensagemFormatada);
+    
+    // Número do WhatsApp da Ycorps
+    const whatsappNumber = '5549988417900';
+    
+    // Criar URL do WhatsApp
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${mensagemEncoded}`;
+    
+    // Redirecionar para WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    setIsLoading(false);
+    
+    // Limpar formulário
+    e.currentTarget.reset();
   };
 
   return (
@@ -137,7 +139,7 @@ export const ContactForm = () => {
                           <span>Enviando...</span>
                         </>
                       ) : (
-                        <span>Enviar mensagem</span>
+                        <span>Enviar</span>
                       )}
                     </button>
                   </div>

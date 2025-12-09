@@ -65,7 +65,7 @@ export const FAQ = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white/80 border border-[#1a3e22]/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-[#1a3e22]/60"
+                className="bg-[#f0ece3] border border-[#1a3e22]/30 rounded-lg overflow-hidden transition-all duration-300 hover:border-[#1a3e22]/60"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
