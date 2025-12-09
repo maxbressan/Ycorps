@@ -131,6 +131,17 @@ export const Footer = () => {
           <p className="text-gray-700 text-sm">
             ©Ycorps. Todos os direitos reservados.
           </p>
+          <p className="text-gray-700 text-sm mt-2">
+            Feito por{' '}
+            <a 
+              href="https://www.instagram.com/exvision.soft/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#1a3e22] hover:text-[#153319] transition-colors font-medium"
+            >
+              Exvision
+            </a>
+          </p>
         </div>
       </div>
       
