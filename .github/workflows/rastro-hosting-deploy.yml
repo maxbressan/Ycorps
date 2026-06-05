@@ -65,10 +65,12 @@ jobs:
         run: |
           cd "${{ github.workspace }}/dist"
           zip -r "$GITHUB_WORKSPACE/rastro-dist.zip" .
-          curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-upload" \
+          curl -sS -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-upload" \
             -F "site_id=$RASTRO_SITE_ID" \
             -F "deploy_token=$RASTRO_DEPLOY_TOKEN" \
-            -F "archive=@$GITHUB_WORKSPACE/rastro-dist.zip"
+            -F "archive=@$GITHUB_WORKSPACE/rastro-dist.zip" \
+            | tee /tmp/rastro-upload.json
+          grep -q '"ok":true' /tmp/rastro-upload.json
 
       - name: Notificar Rastro — concluído
         if: success() && env.RASTRO_JOB_ID != ''
