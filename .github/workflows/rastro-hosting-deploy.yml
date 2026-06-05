@@ -1,0 +1,104 @@
+# Gerado automaticamente pelo Rastro Digital
+name: Rastro Hosting Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: rastro-hosting-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Notificar Rastro — building
+        env:
+          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
+          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
+          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
+        run: |
+          curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-report" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n \
+              --arg site_id "$RASTRO_SITE_ID" \
+              --arg token "$RASTRO_DEPLOY_TOKEN" \
+              --arg sha "${{ github.sha }}" \
+              --arg msg "${{ github.event.head_commit.message || 'Manual deploy' }}" \
+              --arg author "${{ github.actor }}" \
+              --arg branch "${{ github.ref_name }}" \
+              '{site_id:$site_id,deploy_token:$token,status:"building",commit_sha:$sha,commit_message:$msg,commit_author:$author,branch:$branch}')" \
+            | tee /tmp/rastro-report.json
+          echo "RASTRO_JOB_ID=$(jq -r '.job_id // empty' /tmp/rastro-report.json)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Build
+        run: npm ci && npm run build
+
+      - name: Notificar Rastro — uploading
+        if: env.RASTRO_JOB_ID != ''
+        env:
+          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
+          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
+          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
+          RASTRO_JOB_ID: ${{ env.RASTRO_JOB_ID }}
+        run: |
+          curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-report" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"uploading"}')"
+
+      - uses: actions/checkout@v4
+        with:
+          repository: maxbressan/RastroROOT
+          ref: main
+          path: rastro-tools
+          sparse-checkout: |
+            scripts/hosting-upload-client-dist.mjs
+            scripts/lib
+
+      - name: Upload Hestia
+        env:
+          HESTIA_URL: ${{ secrets.HESTIA_URL }}
+          HESTIA_ACCESS_KEY: ${{ secrets.HESTIA_ACCESS_KEY }}
+          HESTIA_SECRET_KEY: ${{ secrets.HESTIA_SECRET_KEY }}
+          RASTRO_HESTIA_USER: ${{ vars.RASTRO_HESTIA_USER }}
+          RASTRO_SITE_DOMAIN: ${{ vars.RASTRO_SITE_DOMAIN }}
+        run: |
+          node rastro-tools/scripts/hosting-upload-client-dist.mjs \
+            --user="$RASTRO_HESTIA_USER" \
+            --domain="$RASTRO_SITE_DOMAIN" \
+            --from="${{ github.workspace }}/dist"
+
+      - name: Notificar Rastro — concluído
+        if: success() && env.RASTRO_JOB_ID != ''
+        env:
+          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
+          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
+          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
+          RASTRO_JOB_ID: ${{ env.RASTRO_JOB_ID }}
+        run: |
+          curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-report" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" --arg sha "${{ github.sha }}" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"completed",commit_sha:$sha}')"
+
+      - name: Notificar Rastro — falha
+        if: failure() && env.RASTRO_JOB_ID != ''
+        env:
+          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
+          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
+          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
+          RASTRO_JOB_ID: ${{ env.RASTRO_JOB_ID }}
+        run: |
+          curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-report" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"failed",error:"Workflow falhou"}')" || true
