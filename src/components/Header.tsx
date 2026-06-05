@@ -120,7 +120,7 @@ export const Header = () => {
           {/* Menu de navegação central - apenas desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" onClick={handleInicioClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
-              Começo
+              Início
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
             <a href="#" onClick={handleContatoClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
