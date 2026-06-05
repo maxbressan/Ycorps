@@ -65,13 +65,13 @@ jobs:
           RASTRO_SITE_DOMAIN: ${{ vars.RASTRO_SITE_DOMAIN }}
         run: |
           install -m 700 -d ~/.ssh
-          printf '%s\n' "$RASTRO_SSH_PRIVATE_KEY" > ~/.ssh/rastro_deploy
+          echo "$RASTRO_SSH_PRIVATE_KEY" > ~/.ssh/rastro_deploy
           chmod 600 ~/.ssh/rastro_deploy
           ssh-keyscan -H "$RASTRO_SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
           TARGET="/home/$RASTRO_SSH_USER/web/$RASTRO_SITE_DOMAIN/public_html"
-          SSH_OPTS="-i ~/.ssh/rastro_deploy -o StrictHostKeyChecking=accept-new -o BatchMode=yes"
-          ssh $SSH_OPTS "$RASTRO_SSH_USER@$RASTRO_SSH_HOST" "mkdir -p \"$TARGET\" && find \"$TARGET\" -mindepth 1 ! -name '.htaccess' -delete"
-          scp -r $SSH_OPTS "${{ github.workspace }}/dist/." "$RASTRO_SSH_USER@$RASTRO_SSH_HOST:$TARGET/"
+          scp -i ~/.ssh/rastro_deploy -o StrictHostKeyChecking=accept-new -o BatchMode=yes -r \
+            "${{ github.workspace }}/dist/." \
+            "$RASTRO_SSH_USER@$RASTRO_SSH_HOST:$TARGET/"
 
       - name: Notificar Rastro — concluído
         if: success() && env.RASTRO_JOB_ID != ''
