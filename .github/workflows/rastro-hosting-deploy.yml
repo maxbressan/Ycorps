@@ -57,14 +57,6 @@ jobs:
             -H "Content-Type: application/json" \
             -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"uploading"}')"
 
-      - uses: actions/checkout@v4
-        with:
-          repository: maxbressan/RastroROOT
-          ref: main
-          path: rastro-tools
-          token: ${{ secrets.RASTRO_TOOLS_GITHUB_TOKEN }}
-          sparse-checkout: scripts
-
       - name: Upload Hestia
         env:
           HESTIA_URL: ${{ secrets.HESTIA_URL }}
@@ -73,7 +65,7 @@ jobs:
           RASTRO_HESTIA_USER: ${{ vars.RASTRO_HESTIA_USER }}
           RASTRO_SITE_DOMAIN: ${{ vars.RASTRO_SITE_DOMAIN }}
         run: |
-          node rastro-tools/scripts/hosting-upload-client-dist.mjs \
+          node .rastro/upload/hosting-upload-client-dist.mjs \
             --user="$RASTRO_HESTIA_USER" \
             --domain="$RASTRO_SITE_DOMAIN" \
             --from="${{ github.workspace }}/dist"
