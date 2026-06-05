@@ -57,18 +57,18 @@ jobs:
             -H "Content-Type: application/json" \
             -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"uploading"}')"
 
-      - name: Upload Hestia
+      - name: Upload via Rastro
         env:
-          HESTIA_URL: ${{ secrets.HESTIA_URL }}
-          HESTIA_ACCESS_KEY: ${{ secrets.HESTIA_ACCESS_KEY }}
-          HESTIA_SECRET_KEY: ${{ secrets.HESTIA_SECRET_KEY }}
-          RASTRO_HESTIA_USER: ${{ vars.RASTRO_HESTIA_USER }}
-          RASTRO_SITE_DOMAIN: ${{ vars.RASTRO_SITE_DOMAIN }}
+          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
+          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
+          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
         run: |
-          node .rastro/upload/hosting-upload-client-dist.mjs \
-            --user="$RASTRO_HESTIA_USER" \
-            --domain="$RASTRO_SITE_DOMAIN" \
-            --from="${{ github.workspace }}/dist"
+          cd "${{ github.workspace }}/dist"
+          zip -r "$GITHUB_WORKSPACE/rastro-dist.zip" .
+          curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-upload" \
+            -F "site_id=$RASTRO_SITE_ID" \
+            -F "deploy_token=$RASTRO_DEPLOY_TOKEN" \
+            -F "archive=@$GITHUB_WORKSPACE/rastro-dist.zip"
 
       - name: Notificar Rastro — concluído
         if: success() && env.RASTRO_JOB_ID != ''
