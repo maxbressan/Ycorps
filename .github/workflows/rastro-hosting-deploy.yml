@@ -57,20 +57,21 @@ jobs:
             -H "Content-Type: application/json" \
             -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"uploading"}')"
 
-      - name: Upload via Rastro
+      - name: Upload via SSH
         env:
-          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
-          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
-          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
+          RASTRO_SSH_PRIVATE_KEY: ${{ secrets.RASTRO_SSH_PRIVATE_KEY }}
+          RASTRO_SSH_HOST: ${{ vars.RASTRO_SSH_HOST }}
+          RASTRO_SSH_USER: ${{ vars.RASTRO_HESTIA_USER }}
+          RASTRO_SITE_DOMAIN: ${{ vars.RASTRO_SITE_DOMAIN }}
         run: |
-          cd "${{ github.workspace }}/dist"
-          zip -r "$GITHUB_WORKSPACE/rastro-dist.zip" .
-          curl -sS -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-upload" \
-            -F "site_id=$RASTRO_SITE_ID" \
-            -F "deploy_token=$RASTRO_DEPLOY_TOKEN" \
-            -F "archive=@$GITHUB_WORKSPACE/rastro-dist.zip" \
-            | tee /tmp/rastro-upload.json
-          grep -q '"ok":true' /tmp/rastro-upload.json
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$RASTRO_SSH_PRIVATE_KEY" > ~/.ssh/rastro_deploy
+          chmod 600 ~/.ssh/rastro_deploy
+          ssh-keyscan -H "$RASTRO_SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+          TARGET="/home/$RASTRO_SSH_USER/web/$RASTRO_SITE_DOMAIN/public_html/"
+          rsync -avz --delete -e "ssh -i ~/.ssh/rastro_deploy -o StrictHostKeyChecking=accept-new -o BatchMode=yes" \
+            "${{ github.workspace }}/dist/" \
+            "$RASTRO_SSH_USER@$RASTRO_SSH_HOST:$TARGET"
 
       - name: Notificar Rastro — concluído
         if: success() && env.RASTRO_JOB_ID != ''
