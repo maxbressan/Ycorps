@@ -62,6 +62,7 @@ jobs:
           repository: maxbressan/RastroROOT
           ref: main
           path: rastro-tools
+          token: ${{ secrets.RASTRO_TOOLS_GITHUB_TOKEN }}
           sparse-checkout: |
             scripts/hosting-upload-client-dist.mjs
             scripts/lib
