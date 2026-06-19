@@ -8,12 +8,12 @@ on:
 
 concurrency:
   group: rastro-hosting-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
 
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +43,9 @@ jobs:
           cache: npm
 
       - name: Build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.RASTRO_VITE_SUPABASE_ANON_KEY }}
         run: npm ci && npm run build
 
       - name: Notificar Rastro — uploading
@@ -57,21 +60,77 @@ jobs:
             -H "Content-Type: application/json" \
             -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"uploading"}')"
 
-      - name: Upload via SSH
+      - name: Publicar no Hestia (SSH com retry + fallback Supabase)
         env:
+          RASTRO_SITE_ID: ${{ secrets.RASTRO_SITE_ID }}
+          RASTRO_DEPLOY_TOKEN: ${{ secrets.RASTRO_DEPLOY_TOKEN }}
+          RASTRO_SUPABASE_URL: ${{ secrets.RASTRO_SUPABASE_URL }}
           RASTRO_SSH_PRIVATE_KEY: ${{ secrets.RASTRO_SSH_PRIVATE_KEY }}
           RASTRO_SSH_HOST: ${{ vars.RASTRO_SSH_HOST }}
           RASTRO_SSH_USER: ${{ vars.RASTRO_HESTIA_USER }}
           RASTRO_SITE_DOMAIN: ${{ vars.RASTRO_SITE_DOMAIN }}
         run: |
-          install -m 700 -d ~/.ssh
-          echo "$RASTRO_SSH_PRIVATE_KEY" > ~/.ssh/rastro_deploy
-          chmod 600 ~/.ssh/rastro_deploy
-          ssh-keyscan -H "$RASTRO_SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
-          TARGET="/home/$RASTRO_SSH_USER/web/$RASTRO_SITE_DOMAIN/public_html"
-          scp -i ~/.ssh/rastro_deploy -o StrictHostKeyChecking=accept-new -o BatchMode=yes -r \
-            "${{ github.workspace }}/dist/." \
-            "$RASTRO_SSH_USER@$RASTRO_SSH_HOST:$TARGET/"
+          set -euo pipefail
+          DIST="${{ github.workspace }}/dist"
+          if [ ! -d "$DIST" ]; then
+            echo "Pasta de build não encontrada: $DIST"
+            exit 1
+          fi
+
+          upload_supabase() {
+            echo "Publicando via Supabase → Hestia (caminho principal para GitHub Actions)..."
+            (cd "$DIST" && zip -qr /tmp/rastro-dist.zip .)
+            echo "Tamanho do zip: $(du -h /tmp/rastro-dist.zip | cut -f1)"
+            HTTP=$(curl -sS -o /tmp/rastro-upload-body.json -w "%{http_code}" \
+              -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-upload" \
+              -F "site_id=$RASTRO_SITE_ID" \
+              -F "deploy_token=$RASTRO_DEPLOY_TOKEN" \
+              -F "archive=@/tmp/rastro-dist.zip;type=application/zip")
+            echo "Resposta HTTP $HTTP:"
+            cat /tmp/rastro-upload-body.json || true
+            if [ "$HTTP" = "200" ] && grep -q '"ok":true' /tmp/rastro-upload-body.json 2>/dev/null; then
+              echo "Upload Supabase OK"
+              return 0
+            fi
+            echo "Upload Supabase falhou."
+            return 1
+          }
+
+          upload_ssh() {
+            if [ -z "${RASTRO_SSH_PRIVATE_KEY:-}" ] || [ -z "${RASTRO_SSH_HOST:-}" ]; then
+              echo "SSH não configurado — pulando fallback."
+              return 1
+            fi
+            install -m 700 -d ~/.ssh
+            printf '%s\n' "$RASTRO_SSH_PRIVATE_KEY" > ~/.ssh/rastro_deploy
+            chmod 600 ~/.ssh/rastro_deploy
+            ssh-keyscan -H "$RASTRO_SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+            TARGET="/home/$RASTRO_SSH_USER/web/$RASTRO_SITE_DOMAIN/public_html"
+            SSH_OPTS="-i ~/.ssh/rastro_deploy -o StrictHostKeyChecking=accept-new -o BatchMode=yes -o ConnectTimeout=45 -o ServerAliveInterval=15"
+            ssh $SSH_OPTS "$RASTRO_SSH_USER@$RASTRO_SSH_HOST" "mkdir -p \"$TARGET\" && find \"$TARGET\" -mindepth 1 ! -name '.htaccess' -delete"
+            scp -r $SSH_OPTS "$DIST/." "$RASTRO_SSH_USER@$RASTRO_SSH_HOST:$TARGET/"
+          }
+
+          if upload_supabase; then
+            exit 0
+          fi
+
+          echo "Supabase falhou — tentando SSH (porta 22) como fallback..."
+          for attempt in 1 2 3; do
+            echo "=== Upload SSH tentativa $attempt/3 ==="
+            if upload_ssh; then
+              echo "Upload SSH OK na tentativa $attempt"
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              wait=$((30 * attempt))
+              echo "SSH falhou — aguardando ${wait}s antes da próxima tentativa..."
+              sleep "$wait"
+            fi
+          done
+
+          echo "Deploy falhou: Supabase e SSH (3 tentativas). Veja a resposta HTTP acima e confira secrets HESTIA_* no Supabase."
+          exit 1
 
       - name: Notificar Rastro — concluído
         if: success() && env.RASTRO_JOB_ID != ''
@@ -83,7 +142,7 @@ jobs:
         run: |
           curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-report" \
             -H "Content-Type: application/json" \
-            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" --arg sha "${{ github.sha }}" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"completed",commit_sha:$sha}')"
+            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" --arg sha "${{ github.sha }}" --arg branch "${{ github.ref_name }}" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"completed",commit_sha:$sha,branch:$branch}')"
 
       - name: Notificar Rastro — falha
         if: failure() && env.RASTRO_JOB_ID != ''
@@ -95,4 +154,4 @@ jobs:
         run: |
           curl -sf -X POST "${RASTRO_SUPABASE_URL%/}/functions/v1/hosting-deploy-report" \
             -H "Content-Type: application/json" \
-            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"failed",error:"Workflow falhou"}')" || true
+            -d "$(jq -n --arg site_id "$RASTRO_SITE_ID" --arg token "$RASTRO_DEPLOY_TOKEN" --arg job_id "$RASTRO_JOB_ID" --arg err "Deploy falhou após 3 tentativas SSH e fallback Supabase — veja logs" '{site_id:$site_id,deploy_token:$token,job_id:$job_id,status:"failed",error:$err}')" || true
