@@ -155,13 +155,7 @@ ${telefone ? `*Telefone:* ${telefone}\n` : ''}*Mensagem:* ${mensagem}`;
                 </h3>
                     <div className="text-gray-700 text-lg leading-relaxed space-y-4">
                       <p>
-                        Com quase cinco décadas de atuação, a Ycorps se firmou como referência em logística e distribuição de alimentos no sul do país.
-                      </p>
-                      <p>
-                        Contamos com estrutura moderna, mais de 1.000 posições pallets e operações diárias em Santa Catarina, Rio Grande do Sul e Paraná.
-                      </p>
-                      <p>
-                        Nosso diferencial está na combinação entre tecnologia, agilidade e relações sólidas com grandes marcas nacionais e internacionais.
+                        A Ycorps nasceu para resolver o problema real da forte dependência nacional de anticorpos importados, caros, de entrega lenta e com qualidade muitas vezes inconsistente. Somos um laboratório especializado na produção e purificação de anticorpos que combina ciência e tecnologia para garantir autonomia e confiabilidade ao mercado brasileiro. Nosso trabalho oferece eficiência, rastreabilidade e resultados reprodutíveis, entregando produtos de nível internacional sem os entraves da importação.
                       </p>
                     </div>
               </div>

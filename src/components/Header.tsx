@@ -119,24 +119,61 @@ export const Header = () => {
           
           {/* Menu de navegação central - apenas desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" onClick={handleInicioClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
-              Início
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a href="#" onClick={handleContatoClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
-              Contato
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a href="#" onClick={handleSobreClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
-              Sobre
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a href="#" onClick={handleServicosClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
-              Serviços
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
-            </a>
-            <a href="#" onClick={handleFAQClick} className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group">
-              FAQ
+            <div className="relative group">
+              <a
+                href="#"
+                onClick={handleInicioClick}
+                className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative flex items-center gap-1 py-1"
+              >
+                Início
+                <svg
+                  className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
+              </a>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-white rounded-xl shadow-lg py-2 min-w-[180px] border border-gray-100">
+                  <a
+                    href="#"
+                    onClick={handleContatoClick}
+                    className="block px-4 py-2.5 text-[#1a3e22] hover:bg-[#f0ece3] transition-colors"
+                  >
+                    Contato
+                  </a>
+                  <a
+                    href="#"
+                    onClick={handleSobreClick}
+                    className="block px-4 py-2.5 text-[#1a3e22] hover:bg-[#f0ece3] transition-colors"
+                  >
+                    Sobre
+                  </a>
+                  <a
+                    href="#"
+                    onClick={handleServicosClick}
+                    className="block px-4 py-2.5 text-[#1a3e22] hover:bg-[#f0ece3] transition-colors"
+                  >
+                    Serviços
+                  </a>
+                  <a
+                    href="#"
+                    onClick={handleFAQClick}
+                    className="block px-4 py-2.5 text-[#1a3e22] hover:bg-[#f0ece3] transition-colors"
+                  >
+                    FAQ
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/noticias"
+              className="text-[#1a3e22] hover:text-[#1a3e22] transition-colors relative group py-1"
+            >
+              Notícias
               <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1a3e22] transition-all duration-300 group-hover:w-full"></div>
             </a>
           </nav>
