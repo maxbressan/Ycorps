@@ -1,4 +1,6 @@
 export const TeamSection = () => {
+  const TEAM_IMAGE_VERSION = '2';
+
   const teamMembers = [
     {
       name: "Dra. Claudia Pies Biffi",
@@ -56,7 +58,7 @@ export const TeamSection = () => {
                   <div className="flex justify-center md:justify-start">
                     <div className="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-white/20 shadow-lg overflow-hidden">
                       <img
-                        src={member.image}
+                        src={`${member.image}?v=${TEAM_IMAGE_VERSION}`}
                         alt={member.name}
                         className="w-full h-full object-cover scale-150"
                       />
