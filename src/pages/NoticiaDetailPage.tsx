@@ -1,11 +1,12 @@
+import { useLanguage } from '@/i18n/LanguageContext';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { fetchNoticiaBySlug, formatNoticiaDate } from '@/services/noticiasService';
+import { DiscoveryHeader as Header, DiscoveryFooter as Footer, DiscoveryLayout, Languages } from '@/components/DiscoverySite';
+import { fetchNoticiaBySlug } from '@/services/noticiasService';
 import type { Noticia } from '@/types/noticia';
 
 const NoticiaDetailPage = () => {
+  const { language } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
   const [noticia, setNoticia] = useState<Noticia | null>(null);
   const [loading, setLoading] = useState(true);
@@ -27,11 +28,13 @@ const NoticiaDetailPage = () => {
     loadNoticia();
   }, [slug]);
 
-  const dateLabel = formatNoticiaDate(noticia?.published_at ?? noticia?.created_at ?? null);
+  const dateValue = noticia?.published_at ?? noticia?.created_at;
+  const parsed = dateValue ? new Date(dateValue) : null;
+  const dateLabel = parsed && !Number.isNaN(parsed.getTime()) ? new Intl.DateTimeFormat(language === 'pt' ? 'pt-BR' : language, {day:'2-digit',month:'long',year:'numeric'}).format(parsed) : '';
 
   return (
-    <div className="min-h-screen bg-[#f0ece3]">
-      <Header />
+    <DiscoveryLayout>
+      <Header /><div className="secondary-language-bar"><Languages/></div>
 
       <main className="pt-36 pb-20">
         <div className="container mx-auto px-4">
@@ -71,12 +74,12 @@ const NoticiaDetailPage = () => {
                 <span>Ycorps</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-[#1a3e22] leading-tight">
+              <h1 data-no-translate className="text-4xl md:text-5xl font-bold text-[#1a3e22] leading-tight">
                 {noticia.title}
               </h1>
 
               <div className="mt-10 rounded-3xl bg-white border border-[#1a3e22]/10 shadow-lg p-8 md:p-10">
-                <div className="prose prose-lg max-w-none text-gray-700 whitespace-pre-wrap leading-8">
+                <div data-no-translate className="prose prose-lg max-w-none text-gray-700 whitespace-pre-wrap leading-8">
                   {noticia.content}
                 </div>
               </div>
@@ -95,8 +98,8 @@ const NoticiaDetailPage = () => {
         </div>
       </main>
 
-      <Footer />
-    </div>
+      <div className="discovery-news-footer"><Footer /></div>
+    </DiscoveryLayout>
   );
 };
 

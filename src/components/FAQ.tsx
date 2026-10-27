@@ -1,3 +1,4 @@
+import { Localize } from '@/i18n/LanguageContext';
 import { useState } from 'react';
 
 export const FAQ = () => {
@@ -51,7 +52,7 @@ export const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-[#f0ece3]">
+    <Localize><section id="faq" className="py-20 bg-[#f0ece3]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl text-left text-[#1a3e22] mb-4">
@@ -103,6 +104,6 @@ export const FAQ = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section></Localize>
   );
 };

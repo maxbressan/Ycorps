@@ -1,0 +1,990 @@
+{
+  "Falar pelo WhatsApp": [
+    "Hablar por WhatsApp",
+    "Chat on WhatsApp"
+  ],
+  "Ycorps — início": [
+    "Ycorps — inicio",
+    "Ycorps — home"
+  ],
+  "Ycorps — Soluções em diagnóstico": [
+    "Ycorps — Soluciones de diagnóstico",
+    "Ycorps — Diagnostic solutions"
+  ],
+  "Navegação principal": [
+    "Navegación principal",
+    "Main navigation"
+  ],
+  "Início": [
+    "Inicio",
+    "Home"
+  ],
+  "Notícias": [
+    "Noticias",
+    "News"
+  ],
+  "Solicitar análise gratuita": [
+    "Solicitar análisis gratuito",
+    "Request a free analysis"
+  ],
+  "Alta especificidade": [
+    "Alta especificidad",
+    "High specificity"
+  ],
+  "O desenho parte das características do antígeno e do objetivo experimental.": [
+    "El diseño parte de las características del antígeno y del objetivo experimental.",
+    "Design starts with the antigen's characteristics and the experimental objective."
+  ],
+  "Menor background": [
+    "Menor señal de fondo",
+    "Lower background"
+  ],
+  "Uma alternativa para contextos em que interações associadas a anticorpos de mamíferos são relevantes.": [
+    "Una alternativa cuando las interacciones asociadas a anticuerpos de mamíferos son relevantes.",
+    "An alternative when interactions associated with mammalian antibodies are relevant."
+  ],
+  "Produção escalável": [
+    "Producción escalable",
+    "Scalable production"
+  ],
+  "A coleta de ovos abre uma rota recorrente de material para o projeto.": [
+    "La recolección de huevos ofrece un suministro recurrente de material para el proyecto.",
+    "Egg collection provides a recurring source of material for the project."
+  ],
+  "Projeto flexível": [
+    "Proyecto flexible",
+    "Flexible projects"
+  ],
+  "Imunização, coleta e processamento são orientados pelos dados de titulação.": [
+    "La inmunización, la recolección y el procesamiento se guían por los datos de titulación.",
+    "Immunization, collection, and processing are guided by antibody titer data."
+  ],
+  "Planejamento do antígeno": [
+    "Planificación del antígeno",
+    "Antigen planning"
+  ],
+  "Revisão do alvo e estratégia de imunização.": [
+    "Revisión de la diana y estrategia de inmunización.",
+    "Target review and immunization strategy."
+  ],
+  "Imunização das galinhas": [
+    "Inmunización de las gallinas",
+    "Hen immunization"
+  ],
+  "Protocolo conduzido a partir da estratégia definida.": [
+    "Protocolo basado en la estrategia definida.",
+    "Protocol based on the agreed strategy."
+  ],
+  "Monitoramento por ELISA": [
+    "Seguimiento por ELISA",
+    "ELISA monitoring"
+  ],
+  "Leituras sequenciais ao longo do projeto.": [
+    "Lecturas secuenciales a lo largo del proyecto.",
+    "Sequential readings throughout the project."
+  ],
+  "Purificação": [
+    "Purificación",
+    "Purification"
+  ],
+  "Rota escolhida conforme nível de enriquecimento necessário.": [
+    "Método elegido según el nivel de enriquecimiento necesario.",
+    "Method selected for the required level of enrichment."
+  ],
+  "Entrega": [
+    "Entrega",
+    "Delivery"
+  ],
+  "Produto, dados de titulação e relatório técnico.": [
+    "Producto, datos de titulación e informe técnico.",
+    "Product, titer data, and technical report."
+  ],
+  "IgY total em tampão": [
+    "IgY total en tampón",
+    "Total IgY in buffer"
+  ],
+  "Separação das frações proteicas": [
+    "Separación de fracciones proteicas",
+    "Separation of protein fractions"
+  ],
+  "Fração total mais pura": [
+    "Fracción total más pura",
+    "Purer total fraction"
+  ],
+  "Cromatografia de afinidade e SEC": [
+    "Cromatografía de afinidad y SEC",
+    "Affinity chromatography and SEC"
+  ],
+  "WB, IHQ e ELISA": [
+    "WB, IHQ y ELISA",
+    "WB, IHC, and ELISA"
+  ],
+  "Enriquecimento específico": [
+    "Enriquecimiento específico",
+    "Specific enrichment"
+  ],
+  "Imunoafinidade": [
+    "Inmunoafinidad",
+    "Immunoaffinity"
+  ],
+  "WB, IHQ, FACS e ELISA": [
+    "WB, IHQ, FACS y ELISA",
+    "WB, IHC, FACS, and ELISA"
+  ],
+  "Diretora Executiva": [
+    "Directora Ejecutiva",
+    "Chief Executive Officer"
+  ],
+  "Diretora de Operações": [
+    "Directora de Operaciones",
+    "Chief Operating Officer"
+  ],
+  "Diretor Técnico": [
+    "Director Técnico",
+    "Technical Director"
+  ],
+  "Consultora Técnica": [
+    "Consultora Técnica",
+    "Technical Consultant"
+  ],
+  "Doutora em Ciência Animal e com MBA em Gestão do Agronegócio, com carreira como docente e responsável técnica em produção avícola. Administradora financeira e jurídica da Ycorps, representa formalmente a empresa e gerencia nossas parcerias.": [
+    "Doctora en Ciencia Animal y MBA en Gestión de Agronegocios, con trayectoria docente y como responsable técnica en producción avícola. Administra las finanzas y los asuntos jurídicos de Ycorps, representa formalmente a la empresa y gestiona nuestras alianzas.",
+    "PhD in Animal Science with an MBA in Agribusiness Management, with a career in teaching and technical oversight of poultry production. She manages Ycorps' financial and legal affairs, formally represents the company, and oversees our partnerships."
+  ],
+  "Mestre em Ciência Animal e pesquisadora. É a primeira pessoa com quem você fala: responde pelo comercial, pelo relacionamento com o cliente e pela comunicação da Ycorps.": [
+    "Máster en Ciencia Animal e investigadora. Es su primer contacto: se encarga de las ventas, la relación con los clientes y la comunicación de Ycorps.",
+    "An Animal Science master's graduate and researcher. She is your first point of contact, responsible for sales, client relationships, and communications at Ycorps."
+  ],
+  "Mestre em Bioquímica e doutorando pela UDESC. Responsável pela purificação, controle de qualidade dos lotes e toda documentação técnica que acompanha cada entrega.": [
+    "Máster en Bioquímica y doctorando en la UDESC. Responsable de la purificación, el control de calidad de los lotes y toda la documentación técnica que acompaña cada entrega.",
+    "A Biochemistry master's graduate and PhD candidate at UDESC. Responsible for purification, batch quality control, and all technical documentation accompanying each delivery."
+  ],
+  "Doutora em Ciência Animal, professora titular da UDESC e patologista veterinária. Valida as aplicações dos anticorpos em histopatologia e conecta a Ycorps à rede de laboratórios e órgãos de defesa sanitária.": [
+    "Doctora en Ciencia Animal, profesora titular de la UDESC y patóloga veterinaria. Valida las aplicaciones de los anticuerpos en histopatología y conecta a Ycorps con la red de laboratorios y organismos de sanidad animal.",
+    "PhD in Animal Science, full professor at UDESC, and veterinary pathologist. She validates antibody applications in histopathology and connects Ycorps with laboratory networks and animal health authorities."
+  ],
+  "Transforme seu alvo": [
+    "Transforme su diana",
+    "Turn your target"
+  ],
+  "em um": [
+    "en un",
+    "into a"
+  ],
+  "anticorpo IgY": [
+    "anticuerpo IgY",
+    "IgY antibody"
+  ],
+  "customizado, com": [
+    "personalizado, con",
+    "customized, with"
+  ],
+  "estratégia técnica do": [
+    "estrategia técnica del",
+    "a technical strategy from"
+  ],
+  "antígeno à purificação": [
+    "antígeno a la purificación",
+    "antigen to purification"
+  ],
+  "A": [
+    "La",
+    "The"
+  ],
+  "O": [
+    "El",
+    "The"
+  ],
+  "a": [
+    "la",
+    "the"
+  ],
+  "desenvolve anticorpos contra proteínas, peptídeos, células, haptenos e outros alvos,": [
+    "desarrolla anticuerpos contra proteínas, péptidos, células, haptenos y otras dianas,",
+    "develops antibodies against proteins, peptides, cells, haptens, and other targets,"
+  ],
+  "integrando desenho antigênico, acoplamento, imunização, monitoramento por ELISA, purificação e entrega técnica completa.": [
+    "integrando diseño antigénico, conjugación, inmunización, seguimiento por ELISA, purificación y entrega técnica completa.",
+    "integrating antigen design, conjugation, immunization, ELISA monitoring, purification, and comprehensive technical delivery."
+  ],
+  "Anticorpo em tubo de laboratório, segurado por uma mão com luva azul": [
+    "Anticuerpo en un tubo de laboratorio sostenido por una mano con guante azul",
+    "Antibody in a laboratory tube held by a hand wearing a blue glove"
+  ],
+  "PONTO DE PARTIDA": [
+    "PUNTO DE PARTIDA",
+    "STARTING POINT"
+  ],
+  "Seu antígeno, avaliado com contexto.": [
+    "Su antígeno, evaluado en contexto.",
+    "Your antigen, evaluated in context."
+  ],
+  "Estratégia antes da bancada.": [
+    "Estrategia antes del laboratorio.",
+    "Strategy before the lab bench."
+  ],
+  "Solicitar análise gratuita do meu antígeno": [
+    "Solicitar análisis gratuito de mi antígeno",
+    "Request a free antigen analysis"
+  ],
+  "Comparar pacotes de produção": [
+    "Comparar paquetes de producción",
+    "Compare production packages"
+  ],
+  "Envie a sequência, proteína, peptídeo ou descrição do alvo para avaliarmos a melhor estratégia antes do início.": [
+    "Envíe la secuencia, proteína, péptido o descripción de la diana para evaluar la mejor estrategia antes de empezar.",
+    "Send the sequence, protein, peptide, or target description so we can assess the best strategy before starting."
+  ],
+  "Três ovos sobre o símbolo de um anticorpo: coleta recorrente de IgY a partir da gema": [
+    "Tres huevos sobre el símbolo de un anticuerpo: recolección recurrente de IgY de la yema",
+    "Three eggs over an antibody symbol: recurring IgY collection from egg yolk"
+  ],
+  "COLETA": [
+    "RECOLECCIÓN",
+    "COLLECTION"
+  ],
+  "RECORRENTE": [
+    "RECURRENTE",
+    "RECURRING"
+  ],
+  "A PARTIR DA": [
+    "A PARTIR DE LA",
+    "FROM THE"
+  ],
+  "GEMA": [
+    "YEMA",
+    "YOLK"
+  ],
+  "POR QUE IgY?": [
+    "¿POR QUÉ IgY?",
+    "WHY IgY?"
+  ],
+  "Uma plataforma mais": [
+    "Una plataforma más",
+    "A more"
+  ],
+  "inteligente": [
+    "inteligente",
+    "intelligent platform"
+  ],
+  "para": [
+    "para",
+    "for"
+  ],
+  "anticorpos policlonais": [
+    "anticuerpos policlonales",
+    "polyclonal antibodies"
+  ],
+  "é naturalmente transferida para a gema. Isso permite coleta recorrente e uma rota de produção que": [
+    "se transfiere naturalmente a la yema. Esto permite una recolección recurrente y una vía de producción que",
+    "is naturally transferred to the yolk. This enables recurring collection and a production route that"
+  ],
+  "reduz a dependência de modelos baseados em soro de mamíferos,": [
+    "reduce la dependencia de modelos basados en suero de mamíferos,",
+    "reduces dependence on mammalian serum-based models,"
+  ],
+  "mantendo o projeto conectado ao seu alvo e à sua aplicação.": [
+    "manteniendo el proyecto conectado con su diana y su aplicación.",
+    "keeping the project aligned with your target and application."
+  ],
+  "COMO FUNCIONA": [
+    "CÓMO FUNCIONA",
+    "HOW IT WORKS"
+  ],
+  "O dado de ELISA": [
+    "Los datos de ELISA",
+    "ELISA data"
+  ],
+  "guia a próxima decisão": [
+    "guían la próxima decisión",
+    "guide the next decision"
+  ],
+  "Monitoramos a titulação ao longo do projeto e esses dados orientam o momento mais adequado de coleta e processamento dos anticorpos.": [
+    "Monitorizamos la titulación a lo largo del proyecto. Estos datos orientan el momento más adecuado para recolectar y procesar los anticuerpos.",
+    "We monitor antibody titers throughout the project. These data guide the best timing for antibody collection and processing."
+  ],
+  "Preparação de gema em recipiente sobre balança de laboratório": [
+    "Preparación de yema en un recipiente sobre una balanza de laboratorio",
+    "Egg yolk preparation in a container on a laboratory scale"
+  ],
+  "SERVIÇO IgY": [
+    "SERVICIO IgY",
+    "IgY SERVICE"
+  ],
+  "Um ponto de entrada": [
+    "Un punto de partida",
+    "A technical starting point"
+  ],
+  "técnico para decisões": [
+    "técnico para decisiones",
+    "for more confident"
+  ],
+  "mais seguras": [
+    "más seguras",
+    "decisions"
+  ],
+  "O serviço padrão contempla aproximadamente": [
+    "El servicio estándar incluye aproximadamente",
+    "The standard service includes approximately"
+  ],
+  "60 dias de imunização,": [
+    "60 días de inmunización,",
+    "60 days of immunization,"
+  ],
+  "cerca de 15 dias de coleta de ovos e possibilidade de escalonamento.": [
+    "unos 15 días de recolección de huevos y la posibilidad de ampliar la producción.",
+    "around 15 days of egg collection and the option to scale up."
+  ],
+  "estratégia": [
+    "estrategia",
+    "strategy"
+  ],
+  "acompanha o": [
+    "se adapta al",
+    "follows the"
+  ],
+  "comportamento do antígeno": [
+    "comportamiento del antígeno",
+    "antigen's behavior"
+  ],
+  "e os": [
+    "y los",
+    "and the"
+  ],
+  "resultados de titulação": [
+    "resultados de titulación",
+    "titer results"
+  ],
+  "para equilibrar tempo, qualidade, título e rendimento.": [
+    "para equilibrar tiempo, calidad, título y rendimiento.",
+    "to balance time, quality, titer, and yield."
+  ],
+  "Revisão gratuita do antígeno e do protocolo": [
+    "Revisión gratuita del antígeno y del protocolo",
+    "Free antigen and protocol review"
+  ],
+  "Antes de iniciar, avaliamos o contexto técnico do seu projeto.": [
+    "Antes de empezar, evaluamos el contexto técnico de su proyecto.",
+    "Before starting, we assess your project's technical context."
+  ],
+  "Estratégia ajustável": [
+    "Estrategia ajustable",
+    "Adaptable strategy"
+  ],
+  "O cronograma pode seguir, ser ajustado ou ser encerrado conforme os dados.": [
+    "El cronograma puede continuar, ajustarse o finalizar según los datos.",
+    "The timeline can continue, be adjusted, or end based on the data."
+  ],
+  "Possibilidade de escalonamento": [
+    "Posibilidad de ampliar la producción",
+    "Scalable production"
+  ],
+  "Planeje novos ciclos conforme sua necessidade.": [
+    "Planifique nuevos ciclos según sus necesidades.",
+    "Plan additional cycles according to your needs."
+  ],
+  "Produção de anticorpos IgY com ovos, pipeta e amostras em laboratório": [
+    "Producción de anticuerpos IgY con huevos, pipeta y muestras en el laboratorio",
+    "IgY antibody production with eggs, a pipette, and laboratory samples"
+  ],
+  "Decisão baseada em titulação": [
+    "Decisión basada en titulación",
+    "Titer-based decisions"
+  ],
+  "O projeto não segue no": [
+    "El proyecto no funciona en",
+    "The project does not run on"
+  ],
+  "automático: cada etapa": [
+    "automático: cada etapa",
+    "autopilot: each stage"
+  ],
+  "responde aos dados.": [
+    "responde a los datos.",
+    "responds to the data."
+  ],
+  "PACOTES DE PRODUÇÃO": [
+    "PAQUETES DE PRODUCCIÓN",
+    "PRODUCTION PACKAGES"
+  ],
+  "Escolha o nível de": [
+    "Elija el nivel de",
+    "Choose the level of"
+  ],
+  "purificação": [
+    "purificación",
+    "purification"
+  ],
+  "que": [
+    "que",
+    "that"
+  ],
+  "sua aplicação pede": [
+    "su aplicación necesita",
+    "your application needs"
+  ],
+  "PACOTE": [
+    "PAQUETE",
+    "PACKAGE"
+  ],
+  "Procedimento": [
+    "Procedimiento",
+    "Procedure"
+  ],
+  "Pureza": [
+    "Pureza",
+    "Purity"
+  ],
+  "Aplicações": [
+    "Aplicaciones",
+    "Applications"
+  ],
+  "Aplicação": [
+    "Aplicación",
+    "Application"
+  ],
+  "TODOS OS PACOTES INCLUEM:": [
+    "TODOS LOS PAQUETES INCLUYEN:",
+    "ALL PACKAGES INCLUDE:"
+  ],
+  "Imunização de uma galinha, amostra pré-imune, monitoramento por ELISA, dados de titulação,": [
+    "Inmunización de una gallina, muestra preinmune, seguimiento por ELISA, datos de titulación,",
+    "Immunization of one hen, a preimmune sample, ELISA monitoring, titer data,"
+  ],
+  "relatório técnico completo e recomendação de reforço, escalonamento ou encerramento.": [
+    "informe técnico completo y recomendación de refuerzo, ampliación o finalización.",
+    "a complete technical report, and a recommendation for boosting, scaling up, or ending the project."
+  ],
+  "ENTREGÁVEIS": [
+    "ENTREGABLES",
+    "DELIVERABLES"
+  ],
+  "ENTREGÁVEL": [
+    "ENTREGABLE",
+    "DELIVERABLE"
+  ],
+  "Clareza operacional": [
+    "Claridad operativa",
+    "Operational clarity"
+  ],
+  "em cada entrega": [
+    "en cada entrega",
+    "in every delivery"
+  ],
+  "O recebimento é estruturado para que sua equipe saiba o que foi acompanhado, processado e recomendado.": [
+    "La entrega está estructurada para que su equipo sepa qué se ha monitorizado, procesado y recomendado.",
+    "Deliveries are structured so your team knows what was monitored, processed, and recommended."
+  ],
+  "PACOTE 1": [
+    "PAQUETE 1",
+    "PACKAGE 1"
+  ],
+  "PACOTE 2": [
+    "PAQUETE 2",
+    "PACKAGE 2"
+  ],
+  "PACOTE 3": [
+    "PAQUETE 3",
+    "PACKAGE 3"
+  ],
+  "Relatório completo": [
+    "Informe completo",
+    "Complete report"
+  ],
+  "Sim": [
+    "Sí",
+    "Yes"
+  ],
+  "Dados de ELISA": [
+    "Datos de ELISA",
+    "ELISA data"
+  ],
+  "IgY pré-imune": [
+    "IgY preinmune",
+    "Preimmune IgY"
+  ],
+  "IgY total purificada": [
+    "IgY total purificada",
+    "Purified total IgY"
+  ],
+  "Anticorpo purificado por afinidade": [
+    "Anticuerpo purificado por afinidad",
+    "Affinity-purified antibody"
+  ],
+  "ANTÍGENOS ACEITOS": [
+    "ANTÍGENOS ACEPTADOS",
+    "ACCEPTED ANTIGENS"
+  ],
+  "Começamos": [
+    "Empezamos",
+    "We start"
+  ],
+  "pelo formato do": [
+    "por el formato de",
+    "with your"
+  ],
+  "seu alvo": [
+    "su diana",
+    "target's format"
+  ],
+  "envio,": [
+    "envío,",
+    "shipment,"
+  ],
+  "estabilidade,": [
+    "estabilidad,",
+    "stability,"
+  ],
+  "a necessidade de": [
+    "la necesidad de",
+    "the need for"
+  ],
+  "conjugação a carreador": [
+    "conjugación a un portador",
+    "carrier conjugation"
+  ],
+  "e o": [
+    "y la",
+    "and the"
+  ],
+  "alinhamento prévio": [
+    "coordinación previa",
+    "prior coordination"
+  ],
+  "são considerados antes da imunização.": [
+    "se consideran antes de la inmunización.",
+    "are considered before immunization."
+  ],
+  "FORMATO": [
+    "FORMATO",
+    "FORMAT"
+  ],
+  "QUANTIDADE RECOMENDADA": [
+    "CANTIDAD RECOMENDADA",
+    "RECOMMENDED AMOUNT"
+  ],
+  "Proteína purificada": [
+    "Proteína purificada",
+    "Purified protein"
+  ],
+  "Expressão de proteína": [
+    "Expresión de proteína",
+    "Protein expression"
+  ],
+  "Sequência do alvo": [
+    "Secuencia de la diana",
+    "Target sequence"
+  ],
+  "Peptídeos": [
+    "Péptidos",
+    "Peptides"
+  ],
+  "Células": [
+    "Células",
+    "Cells"
+  ],
+  "por imunização": [
+    "por inmunización",
+    "per immunization"
+  ],
+  "Haptenos": [
+    "Haptenos",
+    "Haptens"
+  ],
+  "Avaliado individualmente": [
+    "Evaluado individualmente",
+    "Assessed individually"
+  ],
+  "Nota de planejamento": [
+    "Nota de planificación",
+    "Planning note"
+  ],
+  "A purificação por afinidade pode exigir material adicional.": [
+    "La purificación por afinidad puede requerir material adicional.",
+    "Affinity purification may require additional material."
+  ],
+  "Na análise gratuita, indicamos o que faz sentido para a estratégia proposta.": [
+    "En el análisis gratuito, indicamos lo más adecuado para la estrategia propuesta.",
+    "During the free analysis, we recommend what makes sense for the proposed strategy."
+  ],
+  "SERVIÇOS COMPLEMENTARES:": [
+    "SERVICIOS COMPLEMENTARIOS:",
+    "ADDITIONAL SERVICES:"
+  ],
+  "DESENHO DE ANTÍGENO": [
+    "DISEÑO DE ANTÍGENOS",
+    "ANTIGEN DESIGN"
+  ],
+  "ANÁLISE DE SEQUÊNCIA": [
+    "ANÁLISIS DE SECUENCIAS",
+    "SEQUENCE ANALYSIS"
+  ],
+  "EXPRESSÃO EM": [
+    "EXPRESIÓN EN",
+    "EXPRESSION IN"
+  ],
+  "CONJUGAÇÃO A CARREADORES": [
+    "CONJUGACIÓN A PORTADORES",
+    "CARRIER CONJUGATION"
+  ],
+  "PUREZA E ESPECIFICIDADE": [
+    "PUREZA Y ESPECIFICIDAD",
+    "PURITY AND SPECIFICITY"
+  ],
+  "CONHEÇA A EQUIPE DA YCORPS": [
+    "CONOZCA AL EQUIPO DE YCORPS",
+    "MEET THE YCORPS TEAM"
+  ],
+  "Da granja": [
+    "De la granja",
+    "From the farm"
+  ],
+  "à bancada": [
+    "al laboratorio",
+    "to the lab bench"
+  ],
+  "A força da Ycorps está na sinergia de uma equipe que une expertise em avicultura, bioquímica molecular e diagnóstico veterinário. Graduados em Medicina Veterinária pela Universidade do Estado de Santa Catarina (UDESC), nossos fundadores e diretores compartilham a missão de impulsionar a": [
+    "La fortaleza de Ycorps reside en un equipo que reúne experiencia en avicultura, bioquímica molecular y diagnóstico veterinario. Graduados en Medicina Veterinaria por la Universidade do Estado de Santa Catarina (UDESC), nuestros fundadores y directores comparten la misión de impulsar la",
+    "Ycorps' strength lies in a team that combines expertise in poultry science, molecular biochemistry, and veterinary diagnostics. Graduates in Veterinary Medicine from Universidade do Estado de Santa Catarina (UDESC), our founders and directors share a mission to advance"
+  ],
+  "ciência aplicada.": [
+    "ciencia aplicada.",
+    "applied science."
+  ],
+  "Reconhecimento": [
+    "Reconocimiento",
+    "Recognition"
+  ],
+  "e Inovação": [
+    "e Innovación",
+    "and Innovation"
+  ],
+  "Desde sua": [
+    "Desde su",
+    "Since its"
+  ],
+  "fundação em 2025,": [
+    "fundación en 2025,",
+    "founding in 2025,"
+  ],
+  "a Ycorps é continuamente validada por prêmios e parcerias que fortalecem a inovação catarinense.": [
+    "Ycorps recibe el reconocimiento constante de premios y alianzas que fortalecen la innovación en Santa Catarina.",
+    "Ycorps has earned ongoing recognition through awards and partnerships that strengthen innovation in Santa Catarina."
+  ],
+  "Equipe premiada no Orion Awards 2K25": [
+    "Equipo premiado en los Orion Awards 2K25",
+    "Award-winning team at Orion Awards 2K25"
+  ],
+  "Startup Revelação | Destaque Inovação UDESC": [
+    "Startup Revelación | Distinción Innovación UDESC",
+    "Breakthrough Startup | UDESC Innovation Award"
+  ],
+  "Premiação do Programa Nascer, com cheque de 220 mil reais": [
+    "Premiación del Programa Nascer con un cheque de 220 mil reales",
+    "Programa Nascer award with a check for 220,000 reais"
+  ],
+  "Programa Nascer 5ª Edição": [
+    "Programa Nascer, 5.ª edición",
+    "Programa Nascer, 5th Edition"
+  ],
+  "1º lugar": [
+    "1.er puesto",
+    "1st place"
+  ],
+  "Subvenção Econômica | FAPESC, SEBRAE e SCTI": [
+    "Subvención económica | FAPESC, SEBRAE y SCTI",
+    "Economic grant | FAPESC, SEBRAE, and SCTI"
+  ],
+  "Subvenção Econômica | FINEP, CNPq, FAPESC e SCTI": [
+    "Subvención económica | FINEP, CNPq, FAPESC y SCTI",
+    "Economic grant | FINEP, CNPq, FAPESC, and SCTI"
+  ],
+  "ANÁLISE GRATUITA": [
+    "ANÁLISIS GRATUITO",
+    "FREE ANALYSIS"
+  ],
+  "Conte-nos sobre o seu alvo": [
+    "Cuéntenos sobre su diana",
+    "Tell us about your target"
+  ],
+  "Compartilhe o formato do antígeno": [
+    "Comparta el formato del antígeno",
+    "Share your antigen's format"
+  ],
+  "e o que você pretende fazer com o": [
+    "y lo que desea hacer con el",
+    "and what you want to do with the"
+  ],
+  "anticorpo": [
+    "anticuerpo",
+    "antibody"
+  ],
+  "equipe Ycorps": [
+    "equipo de Ycorps",
+    "Ycorps team"
+  ],
+  "avaliará o contexto e retornará com a": [
+    "evaluará el contexto y responderá con la",
+    "will assess the context and provide"
+  ],
+  "orientação técnica adequada.": [
+    "orientación técnica adecuada.",
+    "appropriate technical guidance."
+  ],
+  "NOME": [
+    "NOMBRE",
+    "NAME"
+  ],
+  "Nome": [
+    "Nombre",
+    "Name"
+  ],
+  "INSTITUIÇÃO/EMPRESA": [
+    "INSTITUCIÓN/EMPRESA",
+    "INSTITUTION/COMPANY"
+  ],
+  "Instituição/empresa": [
+    "Institución/empresa",
+    "Institution/company"
+  ],
+  "E-MAIL PROFISSIONAL": [
+    "CORREO PROFESIONAL",
+    "WORK EMAIL"
+  ],
+  "E-mail profissional": [
+    "Correo profesional",
+    "Work email"
+  ],
+  "TIPO DE ALVO": [
+    "TIPO DE DIANA",
+    "TARGET TYPE"
+  ],
+  "Tipo de alvo": [
+    "Tipo de diana",
+    "Target type"
+  ],
+  "Selecione uma opção": [
+    "Seleccione una opción",
+    "Select an option"
+  ],
+  "Outro": [
+    "Otro",
+    "Other"
+  ],
+  "APLICAÇÃO DESEJADA": [
+    "APLICACIÓN DESEADA",
+    "INTENDED APPLICATION"
+  ],
+  "Aplicação desejada": [
+    "Aplicación deseada",
+    "Intended application"
+  ],
+  "Outra / a definir": [
+    "Otra / por definir",
+    "Other / to be determined"
+  ],
+  "PRAZO DESEJADO": [
+    "PLAZO DESEADO",
+    "DESIRED TIMELINE"
+  ],
+  "Prazo desejado": [
+    "Plazo deseado",
+    "Desired timeline"
+  ],
+  "MATERIAL DISPONÍVEL E CONCENTRAÇÃO APROXIMADA": [
+    "MATERIAL DISPONIBLE Y CONCENTRACIÓN APROXIMADA",
+    "AVAILABLE MATERIAL AND APPROXIMATE CONCENTRATION"
+  ],
+  "Material disponível e concentração aproximada": [
+    "Material disponible y concentración aproximada",
+    "Available material and approximate concentration"
+  ],
+  "NECESSIDADE DE CONJUGAÇÃO, PURIFICAÇÃO POR AFINIDADE OU MARCAÇÃO": [
+    "NECESIDAD DE CONJUGACIÓN, PURIFICACIÓN POR AFINIDAD O MARCAJE",
+    "NEED FOR CONJUGATION, AFFINITY PURIFICATION, OR LABELING"
+  ],
+  "Conjugação, afinidade ou marcação": [
+    "Conjugación, afinidad o marcaje",
+    "Conjugation, affinity, or labeling"
+  ],
+  "OBSERVAÇÕES TÉCNICAS": [
+    "OBSERVACIONES TÉCNICAS",
+    "TECHNICAL NOTES"
+  ],
+  "Observações técnicas": [
+    "Observaciones técnicas",
+    "Technical notes"
+  ],
+  "Enviar meu antígeno para avaliação": [
+    "Enviar mi antígeno para evaluación",
+    "Submit my antigen for review"
+  ],
+  "Ao enviar, você inicia uma análise técnica do seu antígeno pela equipe Ycorps.": [
+    "Al enviar, inicia un análisis técnico de su antígeno por el equipo de Ycorps.",
+    "Submitting starts a technical review of your antigen by the Ycorps team."
+  ],
+  "IgY Discovery para projetos que pedem uma rota técnica clara, do antígeno à purificação.": [
+    "IgY Discovery para proyectos que necesitan una ruta técnica clara, del antígeno a la purificación.",
+    "IgY Discovery for projects that need a clear technical path, from antigen to purification."
+  ],
+  "Tecnologia": [
+    "Tecnología",
+    "Technology"
+  ],
+  "Tecnologia IgY": [
+    "Tecnología IgY",
+    "IgY technology"
+  ],
+  "Pacotes": [
+    "Paquetes",
+    "Packages"
+  ],
+  "Processo": [
+    "Proceso",
+    "Process"
+  ],
+  "Notícias e": [
+    "Noticias y",
+    "News and"
+  ],
+  "novidades": [
+    "novedades",
+    "updates"
+  ],
+  "Acompanhe lançamentos, conquistas e atualizações da Ycorps.": [
+    "Siga los lanzamientos, logros y novedades de Ycorps.",
+    "Follow Ycorps product launches, achievements, and updates."
+  ],
+  "Não foi possível carregar as notícias. Tente novamente em instantes.": [
+    "No se pudieron cargar las noticias. Inténtelo de nuevo en unos momentos.",
+    "Unable to load news. Please try again shortly."
+  ],
+  "Notícias publicadas": [
+    "Noticias publicadas",
+    "Published news"
+  ],
+  "Olá! Gostaria de solicitar uma análise gratuita do meu antígeno.": [
+    "¡Hola! Me gustaría solicitar un análisis gratuito de mi antígeno.",
+    "Hello! I would like to request a free analysis of my antigen."
+  ],
+  "Não informado": [
+    "No indicado",
+    "Not provided"
+  ],
+  "Ycorps | Anticorpos IgY customizados": [
+    "Ycorps | Anticuerpos IgY personalizados",
+    "Ycorps | Custom IgY antibodies"
+  ],
+  "Anticorpos IgY customizados, do antígeno à purificação. Solicite uma análise gratuita do seu antígeno pela equipe Ycorps.": [
+    "Anticuerpos IgY personalizados, del antígeno a la purificación. Solicite un análisis gratuito de su antígeno al equipo de Ycorps.",
+    "Custom IgY antibodies, from antigen to purification. Request a free antigen analysis from the Ycorps team."
+  ],
+  "Destaque": [
+    "Destacado",
+    "Featured"
+  ],
+  "Ler notícia completa": [
+    "Leer la noticia completa",
+    "Read the full story"
+  ],
+  "Continuar lendo": [
+    "Seguir leyendo",
+    "Continue reading"
+  ],
+  "Voltar para notícias": [
+    "Volver a noticias",
+    "Back to news"
+  ],
+  "Notícia não encontrada.": [
+    "Noticia no encontrada.",
+    "News article not found."
+  ],
+  "Perguntas Frequentes": [
+    "Preguntas frecuentes",
+    "Frequently asked questions"
+  ],
+  "Encontre respostas rápidas sobre anticorpos IgY, nossos produtos e processos.": [
+    "Encuentre respuestas rápidas sobre los anticuerpos IgY, nuestros productos y procesos.",
+    "Find quick answers about IgY antibodies, our products, and our processes."
+  ],
+  "O que exatamente a Ycorps produz?": [
+    "¿Qué produce exactamente Ycorps?",
+    "What exactly does Ycorps produce?"
+  ],
+  "A Ycorps desenvolve e purifica anticorpos IgY obtidos a partir de ovos, usados em diagnóstico, pesquisa e soluções biotecnológicas que exigem precisão e estabilidade.": [
+    "Ycorps desarrolla y purifica anticuerpos IgY obtenidos de huevos, utilizados en diagnóstico, investigación y soluciones biotecnológicas que requieren precisión y estabilidad.",
+    "Ycorps develops and purifies egg-derived IgY antibodies for diagnostics, research, and biotechnology solutions that require precision and stability."
+  ],
+  "O que diferencia os anticorpos IgY dos anticorpos tradicionais?": [
+    "¿Qué diferencia a los anticuerpos IgY de los tradicionales?",
+    "How do IgY antibodies differ from traditional antibodies?"
+  ],
+  "O IgY oferece maior estabilidade, menor variação entre lotes e redução de interferências cruzadas. Isso resulta em análises mais consistentes em comparação a métodos tradicionais.": [
+    "La IgY ofrece mayor estabilidad, menor variación entre lotes y menos interferencias cruzadas. Esto permite análisis más consistentes en comparación con los métodos tradicionales.",
+    "IgY offers greater stability, less batch variation, and reduced cross-interference, resulting in more consistent analyses compared with traditional methods."
+  ],
+  "Por que confiar em anticorpos produzidos no Brasil?": [
+    "¿Por qué confiar en los anticuerpos producidos en Brasil?",
+    "Why trust antibodies produced in Brazil?"
+  ],
+  "A produção nacional permite controle direto sobre cada etapa, do desenvolvimento à purificação, garantindo rastreabilidade completa, menor risco de ruptura de fornecimento e padrões equivalentes aos laboratórios internacionais.": [
+    "La producción nacional permite controlar directamente cada etapa, del desarrollo a la purificación, garantizando trazabilidad completa, menor riesgo de interrupciones en el suministro y estándares equivalentes a los de laboratorios internacionales.",
+    "Domestic production provides direct control over every stage, from development to purification, ensuring full traceability, a lower risk of supply disruption, and standards equivalent to international laboratories."
+  ],
+  "A qualidade dos anticorpos é comparável aos importados?": [
+    "¿La calidad de los anticuerpos es comparable a la de los importados?",
+    "Is antibody quality comparable to imported products?"
+  ],
+  "Sim. O processo segue rigor técnico, controle de pureza e testes de desempenho que asseguram equivalência ou superioridade em estabilidade e reprodutibilidade.": [
+    "Sí. El proceso sigue un rigor técnico, control de pureza y pruebas de rendimiento que garantizan una estabilidad y reproducibilidad equivalentes o superiores.",
+    "Yes. The process follows strict technical procedures, purity controls, and performance tests that ensure equivalent or superior stability and reproducibility."
+  ],
+  "Quem pode utilizar anticorpos desenvolvidos pela Ycorps?": [
+    "¿Quién puede utilizar los anticuerpos desarrollados por Ycorps?",
+    "Who can use antibodies developed by Ycorps?"
+  ],
+  "Laboratórios de diagnóstico, universidades, centros de pesquisa, indústrias e empresas que precisam de soluções confiáveis para análise ou desenvolvimento tecnológico.": [
+    "Laboratorios de diagnóstico, universidades, centros de investigación, industrias y empresas que necesitan soluciones fiables para el análisis o el desarrollo tecnológico.",
+    "Diagnostic laboratories, universities, research centers, and companies that need reliable solutions for analysis or technological development."
+  ],
+  "A Ycorps cria anticorpos sob demanda?": [
+    "¿Ycorps crea anticuerpos a medida?",
+    "Does Ycorps develop custom antibodies?"
+  ],
+  "Sim. Projetos personalizados são desenvolvidos quando a aplicação exige um anticorpo específico, garantindo alinhamento ao objetivo científico de cada cliente.": [
+    "Sí. Desarrollamos proyectos personalizados cuando la aplicación requiere un anticuerpo específico, en consonancia con el objetivo científico de cada cliente.",
+    "Yes. Custom projects are developed when an application requires a specific antibody, ensuring alignment with each client's scientific objective."
+  ],
+  "Como funciona o processo de desenvolvimento de um anticorpo?": [
+    "¿Cómo funciona el proceso de desarrollo de un anticuerpo?",
+    "How does the antibody development process work?"
+  ],
+  "O projeto passa por definição do alvo, imunização, coleta, purificação e validação. Cada etapa é controlada, documentada e auditável para garantir padrões consistentes.": [
+    "El proyecto pasa por la definición de la diana, inmunización, recolección, purificación y validación. Cada etapa está controlada, documentada y es auditable para garantizar estándares consistentes.",
+    "The project includes target definition, immunization, collection, purification, and validation. Every stage is controlled, documented, and auditable to ensure consistent standards."
+  ],
+  "O IgY é seguro?": [
+    "¿Es segura la IgY?",
+    "Is IgY safe?"
+  ],
+  "O método é considerado seguro por dispensar procedimentos invasivos e permitir produção padronizada, livres de agentes que interferem em análises laboratoriais.": [
+    "El método se considera seguro porque evita procedimientos invasivos y permite una producción estandarizada, libre de agentes que interfieren en los análisis de laboratorio.",
+    "The method is considered safe because it avoids invasive procedures and allows standardized production free of agents that interfere with laboratory analyses."
+  ],
+  "A Ycorps atende empresas que estão iniciando em biotecnologia?": [
+    "¿Ycorps atiende a empresas que están empezando en biotecnología?",
+    "Does Ycorps work with companies new to biotechnology?"
+  ],
+  "Sim. O suporte técnico ajuda gestores e equipes a escolherem soluções adequadas, mesmo sem experiência prévia em anticorpos.": [
+    "Sí. El soporte técnico ayuda a los responsables y equipos a elegir soluciones adecuadas, incluso sin experiencia previa en anticuerpos.",
+    "Yes. Technical support helps managers and teams choose appropriate solutions, even without previous antibody experience."
+  ],
+  "Como solicitar um orçamento?": [
+    "¿Cómo solicitar un presupuesto?",
+    "How can I request a quote?"
+  ],
+  "Basta preencher o formulário de contato do site informando o tipo de solução requerida, aplicação e prazo desejado.": [
+    "Solo tiene que completar el formulario de contacto del sitio indicando el tipo de solución, la aplicación y el plazo deseado.",
+    "Simply fill out the website's contact form with your required solution, application, and desired timeline."
+  ]
+}

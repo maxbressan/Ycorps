@@ -1,6 +1,6 @@
+import { Localize, useLanguage } from '@/i18n/LanguageContext';
 import { Link } from 'react-router-dom';
 import type { Noticia } from '@/types/noticia';
-import { formatNoticiaDate } from '@/services/noticiasService';
 
 type NoticiaCardProps = {
   noticia: Noticia;
@@ -8,10 +8,13 @@ type NoticiaCardProps = {
 };
 
 export const NoticiaCard = ({ noticia, featured = false }: NoticiaCardProps) => {
-  const dateLabel = formatNoticiaDate(noticia.published_at ?? noticia.created_at);
+  const { language } = useLanguage();
+  const dateValue = noticia.published_at ?? noticia.created_at;
+  const parsed = dateValue ? new Date(dateValue) : null;
+  const dateLabel = parsed && !Number.isNaN(parsed.getTime()) ? new Intl.DateTimeFormat(language === 'pt' ? 'pt-BR' : language, {day:'2-digit',month:'long',year:'numeric'}).format(parsed) : '';
 
   return (
-    <Link
+    <Localize><Link
       to={`/noticias/${noticia.slug}`}
       className={`flex flex-col overflow-hidden rounded-2xl bg-white border border-[#1a3e22]/10 shadow-lg ${
         featured ? 'md:rounded-3xl' : ''
@@ -26,7 +29,7 @@ export const NoticiaCard = ({ noticia, featured = false }: NoticiaCardProps) => 
 
         <p className={`text-sm text-gray-500 ${featured ? 'mt-4' : ''}`}>{dateLabel}</p>
 
-        <h2
+        <h2 data-no-translate
           className={`mt-2 font-bold text-[#1a3e22] leading-snug ${
             featured ? 'text-3xl md:text-4xl' : 'text-xl line-clamp-2'
           }`}
@@ -35,7 +38,7 @@ export const NoticiaCard = ({ noticia, featured = false }: NoticiaCardProps) => 
         </h2>
 
         {noticia.excerpt && (
-          <p
+          <p data-no-translate
             className={`mt-3 text-gray-600 ${
               featured ? 'text-lg line-clamp-3 max-w-3xl' : 'line-clamp-3 flex-1'
             }`}
@@ -66,6 +69,6 @@ export const NoticiaCard = ({ noticia, featured = false }: NoticiaCardProps) => 
           />
         </div>
       )}
-    </Link>
+    </Link></Localize>
   );
 };
